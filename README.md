@@ -59,3 +59,5 @@ If you are starting a new project you can start working now, but if you are addi
 5. Delete left over files from Unity Version Control like x.meta.private or y.meta.private.meta (some files may be hidden so enable see hidden files)
 6. Commit and push.
 7. If you are having issues with .meta files check and modify your gitignore or make sure there are no empty folders. 
+
+This is Aiden's test commit
