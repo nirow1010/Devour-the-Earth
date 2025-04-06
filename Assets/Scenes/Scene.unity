@@ -451,7 +451,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
-  hitColor: {r: 1, g: 0, b: 0, a: 0.7137255}
+  hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
 --- !u!60 &1539940067
 PolygonCollider2D:
   m_ObjectHideFlags: 0
