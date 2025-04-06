@@ -3,7 +3,27 @@
 --- !u!159 &1
 EditorSettings:
   m_ObjectHideFlags: 0
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   serializedVersion: 14
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
+=======
+  serializedVersion: 13
+>>>>>>> Stashed changes
   m_SerializationMode: 2
   m_LineEndingsForNewScripts: 0
   m_DefaultBehaviorMode: 1
@@ -33,7 +53,22 @@ EditorSettings:
   m_UseLegacyProbeSampleCount: 0
   m_SerializeInlineMappingsOnOneLine: 1
   m_DisableCookiesInLightmapper: 0
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
+<<<<<<< Updated upstream
   m_ShadowmaskStitching: 0
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
+=======
+>>>>>>> Stashed changes
   m_AssetPipelineMode: 1
   m_RefreshImportMode: 0
   m_CacheServerMode: 0
