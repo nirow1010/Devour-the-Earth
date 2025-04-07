@@ -2,8 +2,12 @@ using UnityEngine;
 
 public class AssimilationBullet : MonoBehaviour
 {
+
+    [SerializeField] private AudioClip collisionAudio;
     public int damage = 1;
     public float speed = 5;
+    
+    private AudioSource audioSource;
 
     // Update is called once per frame
     void Update()
@@ -16,10 +20,20 @@ public class AssimilationBullet : MonoBehaviour
         this.speed = speed;
     }
 
+    void Start()
+    {
+        audioSource = GetComponent<AudioSource>();
+    }
+
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         EnemyState enemy = collider.gameObject.GetComponent<EnemyState>();
 
+        // Placeholder for collision audio
+        audioSource.clip = collisionAudio;
+        audioSource.Play();
+        
         if (enemy != null)
         {
             enemy.TakeDamage(damage);
