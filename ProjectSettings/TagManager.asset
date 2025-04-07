@@ -6,6 +6,7 @@ TagManager:
   tags:
   - StickerOverlap
   - Sticker
+  - MinionNode
   layers:
   - Default
   - TransparentFX

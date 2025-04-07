@@ -32,6 +32,8 @@ public class DropArea : MonoBehaviour, IDropHandler
                         itemScript.onArea = true;
                         itemScript.CanRotate(true);
                         itemScript.home = dropObj.GetComponent<RectTransform>().anchoredPosition;
+                        dropObj.GetComponentInChildren<MinionData>().hubLocation = itemScript.home;
+                        dropObj.GetComponentInChildren<MinionData>().active = true;
                         //Debug.Log("Shiparea");
                     }
                     break;
@@ -40,6 +42,7 @@ public class DropArea : MonoBehaviour, IDropHandler
                     dropObj.transform.SetParent(gridobject);
                     itemScript.onArea = false;
                     itemScript.CanRotate(false);
+                    dropObj.GetComponentInChildren<MinionData>().active = false;
                     //Debug.Log("menuarea");
                     break;
             
