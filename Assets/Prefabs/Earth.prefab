@@ -138,4 +138,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 5
-  hitColor: {r: 1, g: 0, b: 0, a: 0}
+  hitColor: {r: 1, g: 0, b: 0, a: 1}

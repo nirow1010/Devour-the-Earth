@@ -46,13 +46,15 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         //Debug.Log("OnEndDrag");
         if (eventData.pointerEnter == null || eventData.pointerEnter.GetComponent<DropArea>() == null || overlap)
         {
+            MinionData minionDataScript = GetComponentInChildren<MinionData>();
             if (onArea)
             {
+
                 //Debug.Log("AAA");
                 rectTransform.anchoredPosition = home;
-                GetComponentInChildren<MinionData>().hubLocation = home;
-                GetComponentInChildren<MinionData>().gameLocation = home;
-                GetComponentInChildren<MinionData>().active = true;
+                minionDataScript.hubLocation = home;
+                minionDataScript.gameLocation = GetComponentInChildren<MinionData>().hubToGameLocation();
+                minionDataScript.active = true;
             }
             else
             {
@@ -61,7 +63,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
                 transform.localEulerAngles = new Vector3(0,0,0);
                 Transform gridObject = inventory.transform.Find("Viewport").Find("Content");
                 this.transform.SetParent(gridObject);
-                GetComponentInChildren<MinionData>().active = false;
+                minionDataScript.active = false;
             }
         }
         canvasGroup.alpha = 1f;

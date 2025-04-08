@@ -20,6 +20,7 @@ public class DropArea : MonoBehaviour, IDropHandler
     {
         GameObject dropObj = eventData.pointerDrag;
         DragDrop itemScript = dropObj.GetComponent<DragDrop>();
+        MinionData minionDataScript = dropObj.GetComponentInChildren<MinionData>();
         //Debug.Log("OnDrop");
 
         if (eventData.pointerDrag != null) {
@@ -32,9 +33,9 @@ public class DropArea : MonoBehaviour, IDropHandler
                         itemScript.onArea = true;
                         itemScript.CanRotate(true);
                         itemScript.home = dropObj.GetComponent<RectTransform>().anchoredPosition;
-                        dropObj.GetComponentInChildren<MinionData>().hubLocation = itemScript.home;
-                        dropObj.GetComponentInChildren<MinionData>().gameLocation = itemScript.home;
-                        dropObj.GetComponentInChildren<MinionData>().active = true;
+                        minionDataScript.hubLocation = itemScript.home;
+                        minionDataScript.gameLocation = minionDataScript.hubToGameLocation();
+                        minionDataScript.active = true;
                         //Debug.Log("Shiparea");
                     }
                     break;
