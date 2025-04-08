@@ -17,21 +17,22 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     [SerializeField] private GameObject inventory;
     public Vector2 home;
     public bool onArea;
+    public int minionNodeNum;
 
-    public float rotationSpeed;
     private void Awake()
     {
         rectTransform = GetComponent<RectTransform>();
         canvasGroup = GetComponent<CanvasGroup>();
         roateScript = GetComponent<RotateObj>();
         inventory = GameObject.Find("Ship Menu");
+        canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
         //Debug.Log("OnBeginDrag");
         canvasGroup.alpha = 0.6f;
         canvasGroup.blocksRaycasts = false;
-        transform.SetParent(canvas.transform);
+        transform.SetParent(canvas.transform, true);
     }
 
     public void OnDrag(PointerEventData eventData)
@@ -47,16 +48,20 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         {
             if (onArea)
             {
-                Debug.Log("AAA");
+                //Debug.Log("AAA");
                 rectTransform.anchoredPosition = home;
+                GetComponentInChildren<MinionData>().hubLocation = home;
+                GetComponentInChildren<MinionData>().gameLocation = home;
+                GetComponentInChildren<MinionData>().active = true;
             }
             else
             {
-                Debug.Log("AAAA");
+                //Debug.Log("AAAA");
                 CanRotate(false);
                 transform.localEulerAngles = new Vector3(0,0,0);
                 Transform gridObject = inventory.transform.Find("Viewport").Find("Content");
                 this.transform.SetParent(gridObject);
+                GetComponentInChildren<MinionData>().active = false;
             }
         }
         canvasGroup.alpha = 1f;
