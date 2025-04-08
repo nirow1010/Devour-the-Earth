@@ -29,7 +29,7 @@ public class EnemyState : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        if (health < 0)
+        if (health <= 0)
         {
             GetComponent<DeathScript>().assimilate();
             Destroy(gameObject);

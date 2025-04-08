@@ -148,8 +148,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9b7589eb448124083efd49dbbd6e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionNodes: {fileID: 0}
-  collectedMinionNodes: {fileID: 0}
 --- !u!4 &368997901
 Transform:
   m_ObjectHideFlags: 0
@@ -611,6 +609,62 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2edd3d31ff9ada9419b388088110d748, type: 3}
+--- !u!1 &1617903828 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 530195350152991745, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+  m_PrefabInstance: {fileID: 3670086470105138217}
+  m_PrefabAsset: {fileID: 0}
+--- !u!60 &1617903834
+PolygonCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1617903828}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_CompositeOperation: 0
+  m_CompositeOrder: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 1, y: 0.5}
+    newSize: {x: 1, y: 1}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  m_Points:
+    m_Paths:
+    - - {x: 0, y: 0.25}
+      - {x: -0.5, y: 0}
+      - {x: 0, y: -0.25}
+      - {x: 0.5, y: 0}
+  m_UseDelaunayMesh: 0
 --- !u!1 &1894973367
 GameObject:
   m_ObjectHideFlags: 0
@@ -1050,10 +1104,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 1171102948956024472, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 530195350152991745, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 1617903834}
   m_SourcePrefab: {fileID: 100100000, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
 --- !u!1001 &6255903427949893121
 PrefabInstance:
