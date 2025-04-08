@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 1450485057652798984}
   - component: {fileID: -4134114914299604125}
   m_Layer: 0
-  m_Name: Enemy Sample
+  m_Name: TriangleEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -166,5 +166,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionType: {fileID: 0}
+  minionType: {fileID: 5239364460836554727, guid: eb8b229f0eaebd847a0cefe41a1eced9, type: 3}
   minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}

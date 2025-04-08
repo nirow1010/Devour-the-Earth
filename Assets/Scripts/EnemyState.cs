@@ -31,6 +31,7 @@ public class EnemyState : MonoBehaviour
 
         if (health < 0)
         {
+            GetComponent<DeathScript>().assimilate();
             Destroy(gameObject);
         }
 

@@ -81,4 +81,10 @@ public class MinionData : MonoBehaviour
             }
     }
 
+    public void hubToGameLocation() 
+    {
+        GameObject ship = GameObject.Find("Centerpiece");
+
+    }
+
 }

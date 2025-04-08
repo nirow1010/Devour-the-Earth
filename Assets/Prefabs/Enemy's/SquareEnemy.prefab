@@ -10,11 +10,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4548242278678892098}
   - component: {fileID: 5078059390635723953}
-  - component: {fileID: 2642099536083314382}
+  - component: {fileID: 1269341640156067112}
   - component: {fileID: 1450485057652798984}
   - component: {fileID: -4134114914299604125}
   m_Layer: 0
-  m_Name: Enemy Sample
+  m_Name: SquareEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,7 +79,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 7482667652216324306, guid: 0c10aa8e800967f46aa270ad31a188fd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -90,8 +90,8 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!60 &2642099536083314382
-PolygonCollider2D:
+--- !u!61 &1269341640156067112
+BoxCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -127,19 +127,15 @@ PolygonCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.28866667}
+    pivot: {x: 0.5, y: 0.5}
     oldSize: {x: 1, y: 1}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Points:
-    m_Paths:
-    - - {x: 0, y: 0.5773587}
-      - {x: -0.5, y: -0.28866667}
-      - {x: 0.5, y: -0.28866667}
-  m_UseDelaunayMesh: 0
+  m_Size: {x: 1, y: 1}
+  m_EdgeRadius: 0
 --- !u!114 &1450485057652798984
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,5 +162,5 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionType: {fileID: 0}
+  minionType: {fileID: 3501717510986240449, guid: 5f81a1243cf06ce4facdd72b6024d4ff, type: 3}
   minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
