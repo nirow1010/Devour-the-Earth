@@ -8,6 +8,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
     IDragHandler
 {
     [SerializeField] private Canvas canvas;
+    [SerializeField] private Camera cam;
     private RectTransform rectTransform;
     private CanvasGroup canvasGroup;
     private RotateObj roateScript;
@@ -26,6 +27,7 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         roateScript = GetComponent<RotateObj>();
         inventory = GameObject.Find("Ship Menu");
         canvas = GameObject.Find("Canvas").GetComponent<Canvas>();
+        cam = Camera.main;
     }
     public void OnBeginDrag(PointerEventData eventData)
     {
@@ -35,10 +37,19 @@ public class DragDrop : MonoBehaviour, IPointerDownHandler, IBeginDragHandler, I
         transform.SetParent(canvas.transform, true);
     }
 
+    //public void OnDrag(PointerEventData eventData)
+    //{
+    //    //Debug.Log("OnDrag");
+    //    rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+    //}
+
     public void OnDrag(PointerEventData eventData)
     {
-        //Debug.Log("OnDrag");
-        rectTransform.anchoredPosition += eventData.delta / canvas.scaleFactor;
+        Vector3 globalMousePos;
+        if (RectTransformUtility.ScreenPointToWorldPointInRectangle(rectTransform, eventData.position, cam, out globalMousePos))
+        {
+            rectTransform.position = globalMousePos;
+        }
     }
 
     public void OnEndDrag(PointerEventData eventData)
