@@ -1,7 +1,7 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemyState : State
+public class PlayerState : State
 {
     [SerializeField] Color hitColor;
     private SpriteRenderer sr;
@@ -28,7 +28,6 @@ public class EnemyState : State
 
         if (!IsAlive())
         {
-            GetComponent<DeathScript>().assimilate();
             Destroy(gameObject);
         }
 

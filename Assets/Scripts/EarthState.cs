@@ -1,26 +1,22 @@
 using System.Collections;
 using UnityEngine;
 
-public class EarthState : MonoBehaviour
+public class EarthState : State
 {
-
-    public int startingHealth = 5;
     [SerializeField] Color hitColor;
-
-    private int health;
     private SpriteRenderer sr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected override void Start()
     {
-        health = startingHealth;
+        base.Start();
         sr = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
-    public void TakeDamage(int damage)
+    public override void TakeDamage(float damage)
     {
-        health -= damage;
+        base.TakeDamage(damage);
         StartCoroutine(ReactOnHit());
     }
 
@@ -30,17 +26,17 @@ public class EarthState : MonoBehaviour
 
         yield return new WaitForSeconds(0.2f);
 
-        if (health < 0)
+        if (GetHealth() < 0)
         {
             Destroy(gameObject);
             Application.Quit();
-        } else if (health < 1)
+        } else if (GetHealth() < 1)
         {
             //STAGE 5
-        } else if (health < 2)
+        } else if (GetHealth() < 2)
         {
             //STAGE 4
-        } else if (health < 3)
+        } else if (GetHealth() < 3)
         {
             //STAGE 3
         } else
