@@ -95,10 +95,10 @@ public class MinionData : MonoBehaviour
         Vector2 midpoint = ship.GetComponent<RectTransform>().TransformPoint(ship.GetComponent<RectTransform>().rect.center);
         Vector2 minionPoint = this.GetComponentInParent<RectTransform>().TransformPoint(this.GetComponentInParent<RectTransform>().rect.center);
         
-        Debug.Log(midpoint);
+        //Debug.Log(midpoint);
 
         Vector2 offset = minionPoint - midpoint;
-        Debug.Log(offset);
+        //Debug.Log(offset);
         return offset;
     }
 

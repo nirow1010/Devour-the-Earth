@@ -8,6 +8,7 @@ public class MinionSeporation : MonoBehaviour
     void Start()
     {
         AI = GameObject.FindGameObjectsWithTag("AvoidMe");
+        //AI = GameObject.FindGameObjectsWithTag("enemy");
     }
 
     // Update is called once per frame
@@ -17,6 +18,7 @@ public class MinionSeporation : MonoBehaviour
         {
             if (go != this.gameObject)
             {
+
                 float distance = Vector2.Distance(go.transform.position, this.transform.position);
                 if (distance <= spaceBetween)
                 {
