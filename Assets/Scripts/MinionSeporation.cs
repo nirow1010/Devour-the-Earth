@@ -23,7 +23,7 @@ public class MinionSeporation : MonoBehaviour
                 if (distance <= spaceBetween)
                 {
                     Vector2 direction = transform.position - go.transform.position;
-                    transform.TransformDirection(direction * Time.deltaTime);
+                    transform.Translate(direction * Time.deltaTime);
                 }
             }
         }

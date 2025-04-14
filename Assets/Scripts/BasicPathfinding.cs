@@ -5,13 +5,16 @@ public class BasicPathfinding : MonoBehaviour
     public GameObject goal;
     public float speed;
 
+    public bool isenemy;
+
     public string target;
     public float roateSpeed;
     public float spaceBetween;
 
     void Start()
     {
-        
+        if (isenemy)
+            goal = GameObject.FindWithTag("Player");
     }
 
     // Update is called once per frame

@@ -12,9 +12,10 @@ GameObject:
   - component: {fileID: 1850261463847516070}
   - component: {fileID: -1078780988226726402}
   - component: {fileID: 5299533153568340076}
+  - component: {fileID: 6027410158107701521}
   m_Layer: 0
   m_Name: Earth
-  m_TagString: Untagged
+  m_TagString: Earth
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -139,3 +140,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 5
   hitColor: {r: 1, g: 0, b: 0, a: 0.29411766}
+--- !u!114 &6027410158107701521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484900053570719145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e29cd920b93dcfe4da58709539b1b85a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  desplayRadius: 34.64

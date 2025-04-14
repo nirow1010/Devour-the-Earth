@@ -10,10 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 4548242278678892098}
   - component: {fileID: 5078059390635723953}
-  - component: {fileID: 1269341640156067112}
   - component: {fileID: 1450485057652798984}
   - component: {fileID: -4134114914299604125}
-  m_Layer: 0
+  - component: {fileID: 5426604132168640782}
+  - component: {fileID: -8943773572883902386}
+  - component: {fileID: 6534857366728246793}
+  m_Layer: 7
   m_Name: BasicEnemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
@@ -90,8 +92,36 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!61 &1269341640156067112
-BoxCollider2D:
+--- !u!114 &1450485057652798984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218638885459967150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cd5020466ae9f554bbdf9bf1800cfa4f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  startingHealth: 5
+  hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
+--- !u!114 &-4134114914299604125
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3218638885459967150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  minionType: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
+  minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
+--- !u!58 &5426604132168640782
+CircleCollider2D:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -124,19 +154,9 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 2, y: 2}
-    newSize: {x: 2, y: 2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
-  m_Size: {x: 1, y: 1}
-  m_EdgeRadius: 0
---- !u!114 &1450485057652798984
+  m_Offset: {x: 0, y: -0.1}
+  m_Radius: 0.5
+--- !u!114 &-8943773572883902386
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -145,22 +165,47 @@ MonoBehaviour:
   m_GameObject: {fileID: 3218638885459967150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cd5020466ae9f554bbdf9bf1800cfa4f, type: 3}
+  m_Script: {fileID: 11500000, guid: b5f5ea74497c7ea4885dfb18619f1dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
-  hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
---- !u!114 &-4134114914299604125
-MonoBehaviour:
+  closeRange: 5
+  idleRange: 10
+  chaceRange: 12
+  separationRadius: 2
+  separationStrength: 1
+  chaseSpeed: 7
+  lingerSpeed: 5
+  rb: {fileID: 6534857366728246793}
+  playerLayer:
+    serializedVersion: 2
+    m_Bits: 256
+  avoidLayer:
+    serializedVersion: 2
+    m_Bits: 128
+--- !u!50 &6534857366728246793
+Rigidbody2D:
+  serializedVersion: 5
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3218638885459967150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  minionType: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
-  minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 1
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 4
