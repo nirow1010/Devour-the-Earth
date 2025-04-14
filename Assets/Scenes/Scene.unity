@@ -1151,17 +1151,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-<<<<<<< Updated upstream
     x: 0
     y: 0
     width: 1
     height: 1
-=======
-    x: 0.0012033695
-    y: 0.0021413276
-    width: 0.9963899
-    height: 0.993576
->>>>>>> Stashed changes
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2810,8 +2803,6 @@ Transform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2137248692
 =======
---- !u!1001 &4810708852709054132
->>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
