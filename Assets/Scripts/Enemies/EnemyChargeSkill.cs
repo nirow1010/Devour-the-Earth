@@ -44,6 +44,7 @@ public abstract class EnemyChargeSkill : EnemySkill
 
     public override void UseSkill()
     {
+        lastShootTime = Time.time;
         chargeDuration = 0;
     }
 
@@ -51,23 +52,25 @@ public abstract class EnemyChargeSkill : EnemySkill
     {
         bool isMet = false;
 
-        if (IsSkillChargeReleased())
+        if (Time.time - lastShootTime >= GetCooldown())
         {
-            isMet = chargeDuration >= minChargeTime;
-            if (isMet) lastShootTime = Time.time;
-            chargeTimer = 0;
-        }
-        else if (IsSkillChargeTriggered() && Time.time - lastShootTime >= GetCooldown())
-        {
-            Debug.Log(chargeTimer);
-            chargeTimer += Time.deltaTime;
-
-            if (chargeTimer > maxChargeTime)
+            if (IsSkillChargeReleased())
             {
-                chargeTimer = maxChargeTime;
+                isMet = chargeTimer >= minChargeTime;
+                chargeTimer = 0;
             }
+            else if (IsSkillChargeTriggered())
+            {
+                Debug.Log(chargeTimer);
+                chargeTimer += Time.deltaTime;
 
-            chargeDuration = chargeTimer;
+                if (chargeTimer > maxChargeTime)
+                {
+                    chargeTimer = maxChargeTime;
+                }
+
+                chargeDuration = chargeTimer;
+            }
         }
 
         return isMet;

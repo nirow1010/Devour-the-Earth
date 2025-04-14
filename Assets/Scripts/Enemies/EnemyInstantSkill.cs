@@ -5,11 +5,6 @@ public abstract class EnemyInstantSkill : EnemySkill
 {
     private float lastShootTime;
 
-    protected virtual void Start()
-    {
-        
-    }
-
     protected void Initializer(float baseDamage, float cooldown)
     {
         SetBaseDamage(baseDamage);
@@ -24,6 +19,9 @@ public abstract class EnemyInstantSkill : EnemySkill
 
     public override bool IsSkillConditionMet()
     {
-        return Input.GetKey(KeyCode.K) && Time.time - lastShootTime >= GetCooldown();
+        return IsSkillUseTriggered() && Time.time - lastShootTime >= GetCooldown();
     }
+    
+    // Override this to make AI use skill
+    protected abstract bool IsSkillUseTriggered();
 }
