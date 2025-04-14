@@ -1151,10 +1151,17 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
+<<<<<<< Updated upstream
     x: 0
     y: 0
     width: 1
     height: 1
+=======
+    x: 0.0012033695
+    y: 0.0021413276
+    width: 0.9963899
+    height: 0.993576
+>>>>>>> Stashed changes
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2697,6 +2704,7 @@ MonoBehaviour:
   m_LightCookieSize: {x: 1, y: 1}
   m_LightCookieOffset: {x: 0, y: 0}
   m_SoftShadowQuality: 0
+<<<<<<< Updated upstream
 --- !u!1 &2066692566
 GameObject:
   m_ObjectHideFlags: 0
@@ -2785,6 +2793,9 @@ Transform:
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2137248692
+=======
+--- !u!1001 &4810708852709054132
+>>>>>>> Stashed changes
 PrefabInstance:
   m_ObjectHideFlags: 0
   serializedVersion: 2
@@ -2792,17 +2803,41 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+<<<<<<< Updated upstream
+=======
+    - target: {fileID: -4134114914299604125, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: minionType
+      value: 
+      objectReference: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
+>>>>>>> Stashed changes
     - target: {fileID: 3218638885459967150, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: m_Name
       value: BasicEnemy
       objectReference: {fileID: 0}
     - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+<<<<<<< Updated upstream
       propertyPath: m_LocalPosition.x
       value: 6.753702
       objectReference: {fileID: 0}
     - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: m_LocalPosition.y
       value: 3.3574505
+=======
+      propertyPath: m_LocalScale.x
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: m_LocalScale.y
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 6.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 3.13
+>>>>>>> Stashed changes
       objectReference: {fileID: 0}
     - target: {fileID: 4548242278678892098, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2987,6 +3022,7 @@ SceneRoots:
   - {fileID: 410612369}
   - {fileID: 1121210979}
   - {fileID: 351852816}
+<<<<<<< Updated upstream
   - {fileID: 2137248692}
   - {fileID: 868405829}
   - {fileID: 2066692568}
@@ -2994,3 +3030,6 @@ SceneRoots:
   - {fileID: 630484786}
   - {fileID: 711739699}
   - {fileID: 1720681719}
+=======
+  - {fileID: 4810708852709054132}
+>>>>>>> Stashed changes
