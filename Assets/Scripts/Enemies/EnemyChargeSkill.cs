@@ -4,6 +4,7 @@ public abstract class EnemyChargeSkill : EnemySkill
 {
     private float minChargeTime;
     private float maxChargeTime;
+    private float chargeTimer;
     private float chargeDuration;
     private float lastShootTime;
 
@@ -15,48 +16,66 @@ public abstract class EnemyChargeSkill : EnemySkill
         lastShootTime = -cooldown;
     }
 
-    public void SetChargeInterval(float min, float max)
+    protected void SetChargeInterval(float min, float max)
     {
         minChargeTime = min;
         maxChargeTime = max;
     }
 
-    public float GetMinChargeTime()
+    protected float GetMinChargeTime()
     {
         return minChargeTime;
     }
 
-    public float GetMaxChargeTime()
+    protected float GetMaxChargeTime()
     {
         return maxChargeTime;
     }
 
-    public float GetChargeDuration()
+    protected float GetChargeDuration()
     {
         return chargeDuration;
+    }
+
+    protected void SetCharageDuration(float chargeDuration)
+    {
+        this.chargeDuration = chargeDuration;
+    }
+
+    public override void UseSkill()
+    {
+        chargeDuration = 0;
     }
 
     public override bool IsSkillConditionMet()
     {
         bool isMet = false;
 
-        if (Input.GetKeyUp(KeyCode.V))
+        if (IsSkillChargeReleased())
         {
             isMet = chargeDuration >= minChargeTime;
             if (isMet) lastShootTime = Time.time;
-            chargeDuration = 0;
+            chargeTimer = 0;
         }
-        else if (Input.GetKey(KeyCode.V) && Time.time - lastShootTime >= GetCooldown())
+        else if (IsSkillChargeTriggered() && Time.time - lastShootTime >= GetCooldown())
         {
-            Debug.Log(chargeDuration);
-            chargeDuration += Time.deltaTime;
+            Debug.Log(chargeTimer);
+            chargeTimer += Time.deltaTime;
 
-            if (chargeDuration > maxChargeTime)
+            if (chargeTimer > maxChargeTime)
             {
-                chargeDuration = maxChargeTime;
+                chargeTimer = maxChargeTime;
             }
+
+            chargeDuration = chargeTimer;
         }
 
         return isMet;
     }
+
+    // Override this to make AI start charging
+    protected abstract bool IsSkillChargeTriggered();
+
+    // Override this to make AI shoot
+    protected abstract bool IsSkillChargeReleased();
 }
