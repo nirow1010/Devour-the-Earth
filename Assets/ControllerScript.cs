@@ -1,17 +1,26 @@
-using NUnit.Framework.Interfaces;
+using System;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class ControleScript : MonoBehaviour
+public class ControllerScript : MonoBehaviour
 {
-    [SerializeField] private Transform minionNodes;
-    [SerializeField] private Transform collectedMinionNodes;
+    private Transform minionNodes;
+    private Transform collectedMinionNodes;
 
     private void Awake()
     {
-        minionNodes = GameObject.Find("MinionsList").transform;
-        collectedMinionNodes = GameObject.Find("CollectedList").transform;
+        try
+        {
+            minionNodes = GameObject.Find("MinionsList").transform;
+            collectedMinionNodes = GameObject.Find("CollectedList").transform;
+        }
+        catch (Exception e)
+        {
+            Debug.Log(e);
+            // do nothing
+        }
     }
+
     public void loadScene(string scene) {
 
         setUpMinions(scene);
