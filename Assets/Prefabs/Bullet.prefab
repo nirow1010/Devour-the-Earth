@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 7754979392508924006}
   - component: {fileID: 1191537186931966177}
   - component: {fileID: 6762414081750824537}
-  m_Layer: 0
+  m_Layer: 6
   m_Name: Bullet
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -190,7 +190,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.70127237
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 0

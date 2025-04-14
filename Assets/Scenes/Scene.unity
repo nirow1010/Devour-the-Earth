@@ -181,8 +181,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1a9b7589eb448124083efd49dbbd6e0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionNodes: {fileID: 0}
-  collectedMinionNodes: {fileID: 0}
 --- !u!4 &368997901
 Transform:
   m_ObjectHideFlags: 0
@@ -346,7 +344,7 @@ GameObject:
   m_Component:
   - component: {fileID: 410612369}
   - component: {fileID: 410612368}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Camera area
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -850,7 +848,7 @@ GameObject:
   - component: {fileID: 960544740}
   - component: {fileID: 960544741}
   - component: {fileID: 960544742}
-  m_Layer: 0
+  m_Layer: 3
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -892,10 +890,10 @@ Camera:
   m_LensShift: {x: 0, y: 0}
   m_NormalizedViewPortRect:
     serializedVersion: 2
-    x: 0.0018495684
+    x: 0
     y: 0
-    width: 0.9963008
-    height: 0.99945194
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -2273,12 +2271,32 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: m_Size.x
+      value: 0.84982276
+      objectReference: {fileID: 0}
+    - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: m_Size.y
+      value: 0.7461288
+      objectReference: {fileID: 0}
+    - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: m_Offset.x
+      value: -0.010726929
+      objectReference: {fileID: 0}
+    - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: m_Offset.y
+      value: -0.026817247
+      objectReference: {fileID: 0}
+    - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.x
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 908704379939723239, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: m_SpriteTilingProperty.oldSize.y
       value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 1551997187381034431, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: bulletSpeed
+      value: 20
       objectReference: {fileID: 0}
     - target: {fileID: 2204334097094763169, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: rotSpeed
@@ -2343,6 +2361,10 @@ PrefabInstance:
     - target: {fileID: 4264700071705174372, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
+      propertyPath: maxSpeed
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: accelRate

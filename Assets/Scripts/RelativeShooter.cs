@@ -6,6 +6,7 @@ public class RelativeShooter : MonoBehaviour
     
     public float delayTime = 0.1f;
     public float bulletSpeed = 5;
+    public float bulletSummonOffset = 1.5f;
 
     private bool canShoot = true;
     private float lastShootTime = 0;
@@ -20,7 +21,7 @@ public class RelativeShooter : MonoBehaviour
 
         if (canShoot && Input.GetKey(KeyCode.Space))
         {
-            Vector3 bulletPos = transform.position + transform.up;
+            Vector3 bulletPos = transform.position + transform.up * bulletSummonOffset;
             Quaternion bulletRot = transform.rotation;
 
             AssimilationBullet bullet = Instantiate(bulletPrefab, bulletPos, bulletRot);
