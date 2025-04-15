@@ -61,7 +61,6 @@ public abstract class EnemyChargeSkill : EnemySkill
             }
             else if (IsSkillChargeTriggered())
             {
-                Debug.Log(chargeTimer);
                 chargeTimer += Time.deltaTime;
 
                 if (chargeTimer > maxChargeTime)

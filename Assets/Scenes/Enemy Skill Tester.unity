@@ -917,7 +917,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!212 &1031508414
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1290,7 +1290,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!212 &1241917402
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -1449,11 +1449,11 @@ MonoBehaviour:
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 15
   accelRate: 6
-  autoDestructionTime: 3
+  autoDestructionTime: 1.5
   explosionRadius: 3
   explosionLayerMask:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
 --- !u!1 &1395128657
 GameObject:
   m_ObjectHideFlags: 0

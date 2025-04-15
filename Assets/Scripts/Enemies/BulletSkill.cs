@@ -14,10 +14,8 @@ public class BulletSkill : EnemyInstantSkill
 
     public override void UseSkill()
     {
-        Bullet bullet = Instantiate(bulletPrefab);
+        Bullet bullet = Instantiate(bulletPrefab, bulletFirePoint.position, transform.rotation);
 
-        bullet.transform.position = bulletFirePoint.position;
-        bullet.transform.localEulerAngles = transform.up;
         bullet.SetDamage(GetDamage());
         bullet.SetSpeed(bulletSpeed);
 

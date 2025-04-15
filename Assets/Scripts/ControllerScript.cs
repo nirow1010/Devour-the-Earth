@@ -19,11 +19,6 @@ public class ControllerScript : MonoBehaviour
             Debug.Log(e);
             // do nothing
         }
-
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player Bullet"), LayerMask.NameToLayer("Camera"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player Bullet"), LayerMask.NameToLayer("Player"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy Bullet"), LayerMask.NameToLayer("Camera"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Enemy Bullet"), LayerMask.NameToLayer("Enemy"));
     }
 
     public void loadScene(string scene) {

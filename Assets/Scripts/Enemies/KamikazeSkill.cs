@@ -6,6 +6,7 @@ using UnityEngine.UIElements;
 public class KamikazeSkill : EnemyInstantSkill
 {
     [SerializeField] GameObject explosionParticle;
+
     public float maxLaunchSpeed = 15;
     public float accelRate = 5;
     public float autoDestructionTime = 3;
@@ -18,7 +19,7 @@ public class KamikazeSkill : EnemyInstantSkill
     private bool onKamikaze = false;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
         Initializer(20f, 0f);
         rb = GetComponent<Rigidbody2D>();

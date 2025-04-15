@@ -7,7 +7,7 @@ using UnityEngine;
 public class LaserBeamSkill : EnemyChargeSkill
 {
     [SerializeField] Transform laserFirePoint;
-    [SerializeField] LayerMask laserHitLayers;
+    public LayerMask laserHitLayers;
     // need charging animation
 
     public float laserDistance = 10;
@@ -22,7 +22,7 @@ public class LaserBeamSkill : EnemyChargeSkill
     private LineRenderer lineRenderer;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    protected void Start()
+    protected virtual void Start()
     {
         Initializer(5, 4.5f, 3, 6);
         lineRenderer = GetComponent<LineRenderer>();
@@ -37,20 +37,24 @@ public class LaserBeamSkill : EnemyChargeSkill
     {
         float laserWidth = baseLaserWidth * (1 + laserSizeIncreaseRatio * (GetChargeDuration() - GetMinChargeTime()));
 
-        StartCoroutine(DrawFadingLaser(laserFirePoint.position + transform.up * 0.5f, transform.up * laserDistance, laserWidth));
+        StartCoroutine(DrawFadingLaser(laserFirePoint.position + transform.up * 0.5f, laserFirePoint.position + transform.up * laserDistance, laserWidth));
 
         RaycastHit2D[] hits = Physics2D.CircleCastAll(laserFirePoint.position, laserWidth / 2, transform.up, laserDistance, laserHitLayers);
 
         foreach (RaycastHit2D hit in hits)
         {
             State state = hit.transform.gameObject.GetComponent<State>();
-            state.TakeDamage(GetDamage());
+
+            if (state != null)
+            {
+                state.TakeDamage(GetDamage());
+            }
         }
 
         base.UseSkill();
     }
 
-    private IEnumerator DrawFadingLaser(Vector2 startPos, Vector2 endPos, float thickness)
+    protected virtual IEnumerator DrawFadingLaser(Vector2 startPos, Vector2 endPos, float thickness)
     {
         Draw2DRay(startPos + (Vector2) transform.up * thickness / 4, endPos);
         
@@ -94,6 +98,6 @@ public class LaserBeamSkill : EnemyChargeSkill
     // Connect you AI skill charge release to here
     protected override bool IsSkillChargeReleased()
     {
-        return true;
+        return GetChargeDuration() >= GetMinChargeTime();
     }
 }

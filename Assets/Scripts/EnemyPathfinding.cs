@@ -43,8 +43,8 @@ public class EnemyPathfinding : MonoBehaviour
 
         float thisRadius = GetColliderRadius(GetComponent<Collider2D>());
         farRange = chaceRange;
-
     }
+
     void FixedUpdate()
     {
         bool inClose = Physics2D.OverlapCircle(transform.position, closeRange, playerLayer);
@@ -70,7 +70,6 @@ public class EnemyPathfinding : MonoBehaviour
                     currentState = EnemyState.Chase;
                 break;
         }
-
 
         Vector2 moveDir = Vector2.zero;
 
