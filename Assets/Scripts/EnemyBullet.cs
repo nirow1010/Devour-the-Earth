@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class EnemyBullet : MonoBehaviour
 {
     private float damage = 1;
     private float speed = 5;
@@ -24,8 +24,9 @@ public class Bullet : MonoBehaviour
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
         State state = collider.gameObject.GetComponent<State>();
+        EarthState earth = collider.gameObject.GetComponent<EarthState>();
 
-        if (state != null)
+        if (state != null && earth == null)
         {
             state.TakeDamage(damage);
         }

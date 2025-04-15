@@ -2,7 +2,7 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UIElements;
 
-[RequireComponent(typeof(Rigidbody2D)), RequireComponent(typeof(Collider2D))]
+[RequireComponent(typeof(Rigidbody2D))]
 public class KamikazeSkill : EnemyInstantSkill
 {
     [SerializeField] GameObject explosionParticle;
@@ -15,16 +15,14 @@ public class KamikazeSkill : EnemyInstantSkill
     public LayerMask explosionLayerMask;
 
     private Rigidbody2D rb;
-    private Collider2D col;
     private bool onKamikaze = false;
+    private float counter;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
         Initializer(20f, 0f);
         rb = GetComponent<Rigidbody2D>();
-        col = rb.GetComponent<Collider2D>();
-        col.isTrigger = false;
     }
 
     protected void FixedUpdate()
@@ -34,29 +32,31 @@ public class KamikazeSkill : EnemyInstantSkill
             Vector2 moveDir = transform.up;
             Vector2 moveForce = (moveDir * maxLaunchSpeed - rb.linearVelocity) * accelRate;
             rb.AddForce(moveForce, ForceMode2D.Force);
+
+            Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.9f, explosionLayerMask);
+
+            if (hit != null)
+            {
+                Explode();
+                Destroy(gameObject);
+            }
+
+            if (Time.time - counter >= autoDestructionTime)
+            {
+                Explode();
+                Destroy(gameObject);
+            }
         }
     }
 
     public override void UseSkill()
     {
-        col.isTrigger = true;
-        StartCoroutine(InitiateKamikaze());
+        if (!onKamikaze)
+        {
+            onKamikaze = true;
+            counter = Time.time;
+        }
     }
-
-    protected IEnumerator InitiateKamikaze()
-    {
-        onKamikaze = true;
-        yield return new WaitForSeconds(autoDestructionTime);
-        Explode();
-        Destroy(gameObject);
-    }
-
-    //void OnTriggerEnter2D(Collider2D collider)
-    //{
-    //    StopCoroutine(InitiateKamikaze());
-    //    Explode();
-    //    Destroy(gameObject);
-    //}
 
     private void Explode()
     {

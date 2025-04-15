@@ -216,7 +216,7 @@ MonoBehaviour:
     m_Bits: 256
   avoidLayer:
     serializedVersion: 2
-    m_Bits: 1536
+    m_Bits: 3584
 --- !u!50 &6534857366728246793
 Rigidbody2D:
   serializedVersion: 5
