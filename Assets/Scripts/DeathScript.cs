@@ -6,7 +6,6 @@ public class DeathScript : MonoBehaviour
     private EnemyState enemyScript;
     public GameObject minionType;
     public GameObject minionNode;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         enemyScript = GetComponent<EnemyState>();

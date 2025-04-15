@@ -21,7 +21,7 @@ public class CameraMouseLook2D : MonoBehaviour
         mainCam = Camera.main;
     }
 
-    void LateUpdate()
+    void Update()
     {
         Vector3 mouseWorld = mainCam.ScreenToWorldPoint(Input.mousePosition);
         mouseWorld.z = 0f;
