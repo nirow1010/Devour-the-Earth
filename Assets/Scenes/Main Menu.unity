@@ -623,7 +623,6 @@ RectTransform:
   - {fileID: 501041074}
   - {fileID: 371199705}
   - {fileID: 1280275383}
-  - {fileID: 2125955373}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
@@ -2786,7 +2785,7 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 40.9
+  m_fontSize: 28.25
   m_fontSizeBase: 24
   m_fontWeight: 400
   m_enableAutoSizing: 1
@@ -2955,6 +2954,7 @@ RectTransform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 1578123457}
+  - {fileID: 2125955373}
   m_Father: {fileID: 228159402}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
@@ -3444,8 +3444,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -8, y: -35}
-  m_SizeDelta: {x: 100, y: 50}
+  m_AnchoredPosition: {x: -9.6012, y: -39.6033}
+  m_SizeDelta: {x: 93.5954, y: 31.5867}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1578123458
 MonoBehaviour:
@@ -4554,6 +4554,7 @@ GameObject:
   - component: {fileID: 2125955373}
   - component: {fileID: 2125955375}
   - component: {fileID: 2125955374}
+  - component: {fileID: 2125955376}
   m_Layer: 5
   m_Name: Dialogue Box
   m_TagString: Untagged
@@ -4568,18 +4569,18 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125955372}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.14085642}
+  m_LocalScale: {x: 0.48250002, y: 0.48250002, z: 0.48250002}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 698838354}
-  m_Father: {fileID: 228159402}
+  m_Father: {fileID: 1280275383}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 1}
   m_AnchorMax: {x: 0.5, y: 1}
-  m_AnchoredPosition: {x: -1.131, y: -310.522}
-  m_SizeDelta: {x: 462.058, y: 129.216}
+  m_AnchoredPosition: {x: -2.6487794, y: 8.884308}
+  m_SizeDelta: {x: 462.058, y: 144.09}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2125955374
 MonoBehaviour:
@@ -4619,6 +4620,39 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2125955372}
   m_CullTransparentMesh: 1
+--- !u!114 &2125955376
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2125955372}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8bcbde86046304065b04edad3f4a0663, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textComponent: {fileID: 698838355}
+  lines:
+  - 'A long time ago, in a galaxy far, far away...  '
+  - existed a planet known as "Ruoved."
+  - Sadly, the alien entities occupying this planet suffered from extreme boredom.
+  - To sate this, they started to stress eat...
+  - but the core of their planet only produced zinc. They started to hate that too.
+  - A few technological advncements later, they discover a floating sphere in the
+    galactical distance.
+  - They are taken aback by the beautiful blues and greens that they see, and decide
+    to do some research
+  - Apparantly, the core of this sphere is made of the deliciously rumored iron!
+  - They unanimously decided that their species' mission should be...
+  - To DEVOUR THE EARTH!
+  - ...
+  - ...
+  - '...Fast forward to the present day, 50 light years in the future:'
+  - they have arrived upon the horizon of their destination!
+  - Your job is to help them conquer Earth to enjoy a generational feast!
+  - Good luck...
+  textSpeed: 0.1
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
   m_ObjectHideFlags: 0
