@@ -1,5 +1,36 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &3500037484713837217
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3938147062789534068}
+  m_Layer: 9
+  m_Name: Bullet Fire Point
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3938147062789534068
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3500037484713837217}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 70752610538459998}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &3501717510986240449
 GameObject:
   m_ObjectHideFlags: 0
@@ -13,8 +44,9 @@ GameObject:
   - component: {fileID: 8526928609776350283}
   - component: {fileID: -3704975290476579779}
   - component: {fileID: 7367523594157962473}
+  - component: {fileID: 8829695041819542925}
   m_Layer: 9
-  m_Name: BasicMinion
+  m_Name: Basic Minion
   m_TagString: minion
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -29,10 +61,11 @@ Transform:
   m_GameObject: {fileID: 3501717510986240449}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 4.82, y: 2.51, z: -2.153986}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children: []
+  m_Children:
+  - {fileID: 3938147062789534068}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &3329124570682783414
@@ -142,8 +175,8 @@ CircleCollider2D:
   m_UsedByEffector: 0
   m_CompositeOperation: 0
   m_CompositeOrder: 0
-  m_Offset: {x: 0, y: -0.1}
-  m_Radius: 0.5
+  m_Offset: {x: 0, y: -0.069434226}
+  m_Radius: 0.44498116
 --- !u!114 &7367523594157962473
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,3 +199,18 @@ MonoBehaviour:
     serializedVersion: 2
     m_Bits: 3584
   neerMe: []
+--- !u!114 &8829695041819542925
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3501717510986240449}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a64d2f82113064b44b4eeade5c0deaa0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  bulletFirePoint: {fileID: 3938147062789534068}
+  bulletSpeed: 25
+  bulletPrefab: {fileID: 1191537186931966177, guid: d8720e51d2a629345ad76ecd2e7259b4, type: 3}
