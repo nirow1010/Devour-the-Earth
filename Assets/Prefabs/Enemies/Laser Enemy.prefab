@@ -315,13 +315,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f5ea74497c7ea4885dfb18619f1dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeRange: 0
-  idleRange: 0
-  chaceRange: 0
-  separationRadius: 0
-  separationStrength: 0
-  chaseSpeed: 0
-  lingerSpeed: 0
+  closeRange: 5
+  idleRange: 10
+  chaceRange: 12
+  separationRadius: 2
+  separationStrength: 1
+  chaseSpeed: 7
+  lingerSpeed: 5
   idleSpeed: 0
   earthOrbitRadius: 0
   rb: {fileID: 5000845656894184631}

@@ -801,6 +801,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Laser Enemy
       objectReference: {fileID: 0}
+    - target: {fileID: 2731186732889716331, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+      propertyPath: idleSpeed
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731186732889716331, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+      propertyPath: earthOrbitRadius
+      value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: 2731186732889716331, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+      propertyPath: playerLayer.m_Bits
+      value: 256
+      objectReference: {fileID: 0}
     - target: {fileID: 7450452434434139914, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
@@ -1029,6 +1041,14 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 1174237487863420829, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1174237487863420829, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
+      propertyPath: m_ExcludeLayers.m_Bits
+      value: 1160
+      objectReference: {fileID: 0}
     - target: {fileID: 3218638885459967150, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: m_Name
       value: Kamikaze Ship
@@ -1071,6 +1091,10 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4548242278678892098, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7251759994328462456, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
+      propertyPath: closeRange
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

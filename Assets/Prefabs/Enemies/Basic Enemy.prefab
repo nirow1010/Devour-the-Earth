@@ -46,7 +46,7 @@ GameObject:
   - component: {fileID: 5426604132168640782}
   - component: {fileID: -8943773572883902386}
   - component: {fileID: 6534857366728246793}
-  - component: {fileID: -8060889217728247127}
+  - component: {fileID: 8262507913825281127}
   m_Layer: 10
   m_Name: Basic Enemy
   m_TagString: enemy
@@ -244,7 +244,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 4
---- !u!114 &-8060889217728247127
+--- !u!114 &8262507913825281127
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -253,7 +253,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 3218638885459967150}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 245212ade45720948b72ccc9d659382b, type: 3}
+  m_Script: {fileID: 11500000, guid: cd4d64ca660a74d40ac96d47b7b23ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   bulletFirePoint: {fileID: 72480990400689009}

@@ -16,14 +16,20 @@ public class AIKamikazeSkill : KamikazeSkill
 
     public override void UseSkill()
     {
-        Debug.Log("Kamikaze Activated");
         enemyPathfinding.enabled = false;
         base.UseSkill();
     }
 
     protected override bool IsSkillUseTriggered()
     {
-        Debug.Log(Time.time - startTime);
-        return Time.time - startTime >= kamikazeCounter;
+        if (enemyPathfinding.IsOnFight())
+        {
+            return Time.time - startTime >= kamikazeCounter;
+        }
+        else
+        {
+            startTime = Time.time;
+            return false;
+        }
     }
 }

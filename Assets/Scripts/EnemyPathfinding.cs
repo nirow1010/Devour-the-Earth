@@ -35,7 +35,6 @@ public class EnemyPathfinding : MonoBehaviour
     public LayerMask playerLayer;
     public LayerMask avoidLayer;
 
-
     private void Start()
     {
         player = GameObject.FindWithTag("Player").transform;
@@ -210,6 +209,10 @@ public class EnemyPathfinding : MonoBehaviour
         Gizmos.DrawWireSphere(transform.position, chaceRange);
         Gizmos.DrawWireSphere(transform.position, closeRange);
         Gizmos.DrawWireSphere(transform.position, separationRadius);
+    }
 
+    public bool IsOnFight()
+    {
+        return currentState != EnemyState.Idle;
     }
 }

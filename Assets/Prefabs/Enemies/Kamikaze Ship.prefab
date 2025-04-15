@@ -206,22 +206,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f5ea74497c7ea4885dfb18619f1dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeRange: 0
-  idleRange: 0
-  chaceRange: 0
-  separationRadius: 0
-  separationStrength: 0
-  chaseSpeed: 0
-  lingerSpeed: 0
-  idleSpeed: 0
-  earthOrbitRadius: 0
+  closeRange: 5
+  idleRange: 10
+  chaceRange: 12
+  separationRadius: 2
+  separationStrength: 3
+  chaseSpeed: 7
+  lingerSpeed: 5
+  idleSpeed: 10
+  earthOrbitRadius: 15
   rb: {fileID: 1174237487863420829}
   playerLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 256
   avoidLayer:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 1024
 --- !u!114 &7295031648975009161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -237,7 +237,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 15
   accelRate: 5
-  autoDestructionTime: 3
+  autoDestructionTime: 1
   explosionRadius: 3
   explosionLayerMask:
     serializedVersion: 2

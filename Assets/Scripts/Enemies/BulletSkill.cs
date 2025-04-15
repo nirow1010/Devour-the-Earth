@@ -7,9 +7,9 @@ public class BulletSkill : EnemyInstantSkill
     public float bulletSpeed = 15;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    protected virtual void Start()
     {
-        Initializer(0.5f, 0.5f);
+        Initializer(0.5f, 1.5f);
     }
 
     public override void UseSkill()

@@ -27,7 +27,7 @@ public class KamikazeSkill : EnemyInstantSkill
         col.isTrigger = false;
     }
 
-    void FixedUpdate()
+    protected void FixedUpdate()
     {
         if (onKamikaze)
         {
@@ -51,12 +51,12 @@ public class KamikazeSkill : EnemyInstantSkill
         Destroy(gameObject);
     }
 
-    void OnTriggerEnter2D(Collider2D collider)
-    {
-        StopCoroutine(InitiateKamikaze());
-        Explode();
-        Destroy(gameObject);
-    }
+    //void OnTriggerEnter2D(Collider2D collider)
+    //{
+    //    StopCoroutine(InitiateKamikaze());
+    //    Explode();
+    //    Destroy(gameObject);
+    //}
 
     private void Explode()
     {
