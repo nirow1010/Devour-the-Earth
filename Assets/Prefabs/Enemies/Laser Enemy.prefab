@@ -323,7 +323,7 @@ MonoBehaviour:
   chaseSpeed: 7
   lingerSpeed: 5
   idleSpeed: 10
-  earthOrbitRadius: 15
+  earthOrbitRadius: 20
   rb: {fileID: 5000845656894184631}
   playerLayer:
     serializedVersion: 2
