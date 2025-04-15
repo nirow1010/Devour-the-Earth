@@ -18,11 +18,11 @@ TagManager:
   - Camera
   - Water
   - UI
-  - Bullet
-  - AvoidMe
+  - Player Bullet
+  - Enemy Bullet
   - Player
-  - 
-  - 
+  - Minion
+  - Enemy
   - 
   - 
   - 

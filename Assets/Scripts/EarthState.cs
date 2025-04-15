@@ -1,5 +1,6 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class EarthState : State
 {
@@ -29,19 +30,20 @@ public class EarthState : State
         if (GetHealth() < 0)
         {
             Destroy(gameObject);
-            Application.Quit();
-        } else if (GetHealth() < 1)
+            //Application.Quit();
+            SceneManager.LoadScene("Main Menu");
+        } else if (GetHealth() < 40) // STAGE 5
         {
-            //STAGE 5
-        } else if (GetHealth() < 2)
+            
+        } else if (GetHealth() < 60) // STAGE 4
         {
-            //STAGE 4
-        } else if (GetHealth() < 3)
+            
+        } else if (GetHealth() < 80) // STAGE 3
         {
-            //STAGE 3
-        } else
+            
+        } else if (GetHealth() < 95) // STAGE 2
         {
-            //STAGE 2
+            
         }
 
         sr.color = Color.white;
