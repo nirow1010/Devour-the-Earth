@@ -2,8 +2,8 @@ using UnityEngine;
 
 public class MoveSmartly : MonoBehaviour
 {
-    [SerializeField] Transform obj;
-    [SerializeField] Transform bar;
+    [SerializeField] public Transform obj;
+    [SerializeField] public Transform bar;
 
     // Update is called once per frame
     void Update()

@@ -17,7 +17,7 @@ GameObject:
   - component: {fileID: 7251759994328462456}
   - component: {fileID: 7295031648975009161}
   m_Layer: 10
-  m_Name: Kamikaze Ship
+  m_Name: Kamikaze Enemy
   m_TagString: enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -137,7 +137,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.77132845, y: 0.6233644}
+  m_Size: {x: 0.75, y: 0.6}
   m_EdgeRadius: 0
 --- !u!50 &1174237487863420829
 Rigidbody2D:
@@ -147,7 +147,7 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3218638885459967150}
-  m_BodyType: 1
+  m_BodyType: 0
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
@@ -161,7 +161,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1032
+    m_Bits: 1160
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -192,7 +192,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionType: {fileID: 3501717510986240449, guid: 5f81a1243cf06ce4facdd72b6024d4ff, type: 3}
+  minionType: {fileID: 3501717510986240449, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
   minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
 --- !u!114 &7251759994328462456
 MonoBehaviour:
@@ -221,7 +221,7 @@ MonoBehaviour:
     m_Bits: 256
   avoidLayer:
     serializedVersion: 2
-    m_Bits: 1024
+    m_Bits: 3072
 --- !u!114 &7295031648975009161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -236,7 +236,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 15
-  accelRate: 5
+  accelRate: 7
   autoDestructionTime: 1
   explosionRadius: 3
   explosionLayerMask:

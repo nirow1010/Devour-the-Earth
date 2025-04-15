@@ -6,7 +6,7 @@ public class HealthBar : MonoBehaviour
     private float health;
     private float maxHealth;
     private float healthNormalize;
-    [SerializeField] State script;
+    [SerializeField] public State script;
     [SerializeField] SpriteRenderer sr;
     [SerializeField] UnityEngine.Sprite s0;
     [SerializeField] UnityEngine.Sprite s1;
