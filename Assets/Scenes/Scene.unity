@@ -2055,7 +2055,11 @@ AudioListener:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 488659087}
   m_Enabled: 1
+<<<<<<< Updated upstream
 --- !u!114 &1412542210
+=======
+--- !u!114 &1412542216
+>>>>>>> Stashed changes
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -2067,8 +2071,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ebe409d9233f5eb4680dc2646b93f19c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+<<<<<<< Updated upstream
   startingHealth: 10
   hitColor: {r: 0, g: 0, b: 0, a: 0}
+=======
+  startingHealth: 20
+  hitColor: {r: 1, g: 0.34905648, b: 0.34905648, a: 0.6901961}
+>>>>>>> Stashed changes
 --- !u!1 &1416362770
 GameObject:
   m_ObjectHideFlags: 0
@@ -3396,7 +3405,11 @@ PrefabInstance:
       addedObject: {fileID: 1412542209}
     - targetCorrespondingSourceObject: {fileID: 2314615131601612935, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       insertIndex: -1
+<<<<<<< Updated upstream
       addedObject: {fileID: 1412542210}
+=======
+      addedObject: {fileID: 1412542216}
+>>>>>>> Stashed changes
   m_SourcePrefab: {fileID: 100100000, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
 --- !u!1660057539 &9223372036854775807
 SceneRoots:
