@@ -5,6 +5,9 @@ using UnityEngine.SceneManagement;
 public class EarthState : State
 {
     [SerializeField] Color hitColor;
+    [SerializeField] GameObject Spawner1;
+    [SerializeField] GameObject Spawner2;
+    [SerializeField] GameObject Spawner3;
     private SpriteRenderer sr;
 
     // Start is called once before the first execution of Update after the MonoBehaviour is created
@@ -37,13 +40,13 @@ public class EarthState : State
             
         } else if (GetHealth() < 60) // STAGE 4
         {
-            
+            Instantiate(Spawner3);
         } else if (GetHealth() < 80) // STAGE 3
         {
-            
+            Instantiate(Spawner2);
         } else if (GetHealth() < 95) // STAGE 2
         {
-            
+
         }
 
         sr.color = Color.white;
