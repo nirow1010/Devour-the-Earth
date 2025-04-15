@@ -208,8 +208,8 @@ MonoBehaviour:
   separationStrength: 1
   chaseSpeed: 7
   lingerSpeed: 5
-  idleSpeed: 0
-  earthOrbitRadius: 0
+  idleSpeed: 10
+  earthOrbitRadius: 15
   rb: {fileID: 6534857366728246793}
   playerLayer:
     serializedVersion: 2
