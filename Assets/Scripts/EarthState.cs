@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 public class EarthState : State
 {
     [SerializeField] Color hitColor;
-    [SerializeField] GameObject Spawner1;
+    //private GameObject Spawner1, Spawner0;
     [SerializeField] GameObject Spawner2;
     [SerializeField] GameObject Spawner3;
     private SpriteRenderer sr;
