@@ -3043,7 +3043,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1551997187381034431, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: bulletSpeed
-      value: 20
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 2204334097094763169, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: rotSpeed
