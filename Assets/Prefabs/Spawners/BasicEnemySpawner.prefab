@@ -45,3 +45,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemy: {fileID: 730736319650993459, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
+  burstAmount: 1
+  burstDelay: 0.4
+  spawnDelay: 7

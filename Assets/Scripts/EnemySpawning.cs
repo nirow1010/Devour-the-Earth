@@ -3,22 +3,25 @@ using UnityEngine;
 
 public class EnemySpawning : MonoBehaviour
 {
-
     [SerializeField] GameObject enemy;
+    public int burstAmount = 2;
+    public float burstDelay = 0.5f;
+    public float spawnDelay = 10f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
         StartCoroutine(Spawn());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private IEnumerator Spawn() {
-        yield return new WaitForSeconds(10f);
-        Instantiate(enemy, new Vector3(20,10,0), new Quaternion(0,0,0,0));
+        for (int i = 0; i < burstAmount; i++)
+        {
+            yield return new WaitForSeconds(burstDelay);
+            Instantiate(enemy, new Vector3(20, 9, 0), Quaternion.identity);
+        }
+
+        yield return new WaitForSeconds(spawnDelay);
         StartCoroutine(Spawn());
     }
 

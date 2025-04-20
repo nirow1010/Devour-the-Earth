@@ -2,11 +2,7 @@ using UnityEngine;
 
 public class HealthBar : MonoBehaviour
 {
-    
-    private float health;
-    private float maxHealth;
-    private float healthNormalize;
-    [SerializeField] public State script;
+    [SerializeField] State script;
     [SerializeField] SpriteRenderer sr;
     [SerializeField] UnityEngine.Sprite s0;
     [SerializeField] UnityEngine.Sprite s1;
@@ -18,39 +14,38 @@ public class HealthBar : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        health = script.GetHealth();
         sr.sprite = s0;
     }
 
     // Update is called once per frame
     void Update()
     {
-        health = script.GetHealth();
-        maxHealth = script.startingHealth;
-        healthNormalize = health / maxHealth * 100;
-        //Debug.Log("health is: " + healthNormalize);
-        if(s5 == null) {
-            if(healthNormalize < 20) {
+        float health = script.GetHealth();
+        float maxHealth = script.startingHealth;
+        float healthNormalize = health / maxHealth * 100;
+
+        if (s5 == null) {
+            if (healthNormalize <= 0) {
                 sr.sprite = s4;
-            } else if(healthNormalize < 40) {
+            } else if(healthNormalize <= 25) {
                 sr.sprite = s3;
-            } else if(healthNormalize < 60) {
+            } else if(healthNormalize <= 50) {
                 sr.sprite = s2;
-            } else if(healthNormalize < 80) {
+            } else if(healthNormalize <= 75) {
                 sr.sprite = s1;
             }
         } else {
-            if(healthNormalize < 14) {
+            if (healthNormalize <= 0) {
                 sr.sprite = s6;
-            } else if(healthNormalize < 28) {
+            } else if(healthNormalize <= 50 / 3) {
                 sr.sprite = s5;
-            } else if(healthNormalize < 42) {
+            } else if(healthNormalize <= 100 / 3) {
                 sr.sprite = s4;
-            } else if(healthNormalize < 56) {
+            } else if(healthNormalize <= 50) {
                 sr.sprite = s3;
-            } else if(healthNormalize < 70) {
+            } else if(healthNormalize <= 200 / 3) {
                 sr.sprite = s2;
-            } else if(healthNormalize < 85) {
+            } else if(healthNormalize <= 250 / 3) {
                 sr.sprite = s1;
             }
         }

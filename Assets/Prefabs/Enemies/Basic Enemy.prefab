@@ -201,25 +201,21 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f5ea74497c7ea4885dfb18619f1dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeRange: 5
-  attackRange: 10
-  viewRange: 10
+  closeRange: 7
+  idleRange: 25
+  chaceRange: 20
   separationRadius: 2
   separationStrength: 1
   chaseSpeed: 7
   lingerSpeed: 5
   idleSpeed: 10
   earthOrbitRadius: 15
-  rb: {fileID: 6534857366728246793}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
   avoidLayer:
     serializedVersion: 2
-    m_Bits: 3840
-  shootAtLayer:
-    serializedVersion: 2
-    m_Bits: 768
+    m_Bits: 3072
 --- !u!50 &6534857366728246793
 Rigidbody2D:
   serializedVersion: 5
@@ -242,7 +238,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 2048
+    m_Bits: 0
   m_Interpolate: 1
   m_SleepingMode: 1
   m_CollisionDetection: 0
