@@ -161,7 +161,7 @@ Rigidbody2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 1160
+    m_Bits: 3208
   m_Interpolate: 0
   m_SleepingMode: 1
   m_CollisionDetection: 0
@@ -207,20 +207,24 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeRange: 5
-  idleRange: 20
-  chaceRange: 15
+  attackRange: 10
+  viewRange: 10
   separationRadius: 2
   separationStrength: 3
   chaseSpeed: 7
   lingerSpeed: 5
   idleSpeed: 10
   earthOrbitRadius: 15
+  rb: {fileID: 1174237487863420829}
   playerLayer:
     serializedVersion: 2
     m_Bits: 256
   avoidLayer:
     serializedVersion: 2
-    m_Bits: 3072
+    m_Bits: 3584
+  shootAtLayer:
+    serializedVersion: 2
+    m_Bits: 768
 --- !u!114 &7295031648975009161
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,7 +238,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
-  maxLaunchSpeed: 20
+  maxLaunchSpeed: 15
   accelRate: 7
   autoDestructionTime: 1
   explosionRadius: 3

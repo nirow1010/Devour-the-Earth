@@ -2,20 +2,12 @@ using UnityEngine;
 
 public class MoveSmartly : MonoBehaviour
 {
-    [SerializeField] Transform obj;
+    [SerializeField] public Transform obj;
+    [SerializeField] public Transform bar;
 
     // Update is called once per frame
-    void LateUpdate()
+    void Update()
     {
-        if (obj == null)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            transform.Translate(obj.transform.position.x - transform.position.x,
-                obj.transform.position.y - transform.position.y + 2,
-                obj.transform.position.z - transform.position.z);
-        }
+        bar.Translate(obj.position.x - bar.position.x, obj.position.y - bar.position.y + 2, obj.position.z - bar.position.z);
     }
 }

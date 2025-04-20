@@ -11,19 +11,16 @@ public class BasicPathfinding : MonoBehaviour
     public float roateSpeed;
     public float spaceBetween;
 
-    private GameObject earth;
-
     void Start()
     {
         if (isenemy)
             goal = GameObject.FindWithTag("Player");
-        earth = GameObject.FindGameObjectWithTag("Earth");
     }
 
     // Update is called once per frame
     void Update()
     {
-        if (goal != null && Vector2.Distance(goal.transform.position, this.transform.position) >= spaceBetween)
+        if (Vector2.Distance(goal.transform.position, this.transform.position) >= spaceBetween)
         {
             Vector2 direction = goal.transform.position - this.transform.position;
             transform.Translate(direction * Time.deltaTime * speed, Space.World);
@@ -54,9 +51,6 @@ public class BasicPathfinding : MonoBehaviour
                 closest = t;
             }
         }
-
-        if (closest == null)
-            return earth;
 
         return closest;
     }
