@@ -48,8 +48,6 @@ public class EnemyPathfinding : MonoBehaviour
         bool inEnterChase = Physics2D.OverlapCircle(transform.position, chaceRange, playerLayer);
         bool inExitChase = Physics2D.OverlapCircle(transform.position, idleRange, playerLayer);
 
-        Debug.Log(currentState);
-
         switch (currentState)
         {
             case EnemyState.Idle:

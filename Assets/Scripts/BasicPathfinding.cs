@@ -11,10 +11,13 @@ public class BasicPathfinding : MonoBehaviour
     public float roateSpeed;
     public float spaceBetween;
 
+    private GameObject earth;
+
     void Start()
     {
         if (isenemy)
             goal = GameObject.FindWithTag("Player");
+        earth = GameObject.FindGameObjectWithTag("Earth");
     }
 
     // Update is called once per frame
@@ -51,6 +54,9 @@ public class BasicPathfinding : MonoBehaviour
                 closest = t;
             }
         }
+
+        if (closest == null)
+            return earth;
 
         return closest;
     }
