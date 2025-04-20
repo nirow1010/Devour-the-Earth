@@ -11,14 +11,9 @@ public class EnemySpawning : MonoBehaviour
         StartCoroutine(Spawn());
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-    }
-
     private IEnumerator Spawn() {
         yield return new WaitForSeconds(10f);
-        Instantiate(enemy, new Vector3(20,10,0), new Quaternion(0,0,0,0));
+        Instantiate(enemy, new Vector3(20,10,0), Quaternion.identity);
         StartCoroutine(Spawn());
     }
 

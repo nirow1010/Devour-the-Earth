@@ -1,7 +1,6 @@
-using System.Runtime.Serialization;
-using System.Runtime.Serialization.Formatters;
 using UnityEngine;
 
+[RequireComponent(typeof(Rigidbody2D))]
 public class EnemyPathfinding : MonoBehaviour
 {
     enum EnemyState { Idle, Chase, Close }
@@ -25,22 +24,21 @@ public class EnemyPathfinding : MonoBehaviour
 
     private Vector2 oldVelocity = Vector2.zero;
 
-    public Rigidbody2D rb;
-    
-    private Collider2D playerFar;
-    private Collider2D playerClose;
-
-    private Collider2D[] neerMe;
+    private Rigidbody2D rb;
+    private Collider2D[] nearMe;
 
     public LayerMask playerLayer;
     public LayerMask avoidLayer;
 
     private void Start()
     {
-        player = GameObject.FindWithTag("Player").transform;
-        centerObject = GameObject.FindWithTag("Earth").transform;
+        GameObject playerObj = GameObject.FindWithTag("Player");
+        if (playerObj != null) player = playerObj.transform;
 
-        float thisRadius = GetColliderRadius(GetComponent<Collider2D>());
+        GameObject earthObj = GameObject.FindWithTag("Earth");
+        if (earthObj != null) centerObject = earthObj.transform;
+
+        rb = GetComponent<Rigidbody2D>();
         farRange = chaceRange;
     }
 
@@ -60,13 +58,15 @@ public class EnemyPathfinding : MonoBehaviour
             case EnemyState.Chase:
                 if (inClose)
                     currentState = EnemyState.Close;
-                else if (!inExitChase)
+                else if (!inExitChase || player == null)
                     currentState = EnemyState.Idle;
                 break;
 
             case EnemyState.Close:
                 if (!inClose)
                     currentState = EnemyState.Chase;
+                else if (player == null)
+                    currentState = EnemyState.Idle;
                 break;
         }
 
@@ -99,6 +99,7 @@ public class EnemyPathfinding : MonoBehaviour
         rb.linearVelocity = smoothedVelocity;
 
         GameObject target = FindClosestTarget();
+
         if (target != null)
         {
             Vector2 angleDirection = target.transform.position - transform.position;
@@ -124,6 +125,7 @@ public class EnemyPathfinding : MonoBehaviour
 
         return adjustedDirection;
     }
+
     Vector2 GetOrbitDirectionAroundEarth(Vector2 center)
     {
         Vector2 toCenter = center - (Vector2)transform.position;
@@ -142,10 +144,10 @@ public class EnemyPathfinding : MonoBehaviour
 
     Vector2 GetSeparationForce()
     {
-        neerMe = Physics2D.OverlapCircleAll(transform.position, separationRadius, avoidLayer);
+        nearMe = Physics2D.OverlapCircleAll(transform.position, separationRadius, avoidLayer);
         Vector2 force = Vector2.zero;
 
-        foreach (Collider2D obj in neerMe)
+        foreach (Collider2D obj in nearMe)
         {
             if (obj != null && obj.gameObject != gameObject)
             {
@@ -187,7 +189,7 @@ public class EnemyPathfinding : MonoBehaviour
             }
         }
 
-        foreach (Collider2D obj in neerMe)
+        foreach (Collider2D obj in nearMe)
         {
             if (obj.CompareTag("minion"))
             {

@@ -20,7 +20,7 @@ public class BasicPathfinding : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Vector2.Distance(goal.transform.position, this.transform.position) >= spaceBetween)
+        if (goal != null && Vector2.Distance(goal.transform.position, this.transform.position) >= spaceBetween)
         {
             Vector2 direction = goal.transform.position - this.transform.position;
             transform.Translate(direction * Time.deltaTime * speed, Space.World);

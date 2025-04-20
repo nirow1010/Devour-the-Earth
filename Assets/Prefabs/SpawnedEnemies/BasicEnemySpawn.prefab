@@ -29,8 +29,8 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 771881463467419238}
   - {fileID: 3892145122384128758}
+  - {fileID: 771881463467419238}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &656741727837103284
@@ -60,6 +60,10 @@ PrefabInstance:
     - target: {fileID: -8943773572883902386, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: earthOrbitRadius
       value: 15
+      objectReference: {fileID: 0}
+    - target: {fileID: -8943773572883902386, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: avoidLayer.m_Bits
+      value: 3072
       objectReference: {fileID: 0}
     - target: {fileID: 3218638885459967150, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: m_Name
