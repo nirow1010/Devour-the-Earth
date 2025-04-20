@@ -238,7 +238,7 @@ MonoBehaviour:
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 23
   accelRate: 7
-  autoDestructionTime: 1
+  autoDestructionTime: 0.6
   explosionRadius: 3
   explosionLayerMask:
     serializedVersion: 2

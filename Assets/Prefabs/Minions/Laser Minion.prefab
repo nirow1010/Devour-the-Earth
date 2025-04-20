@@ -107,9 +107,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
   speed: 7
-  isenemy: 0
+  isEnemy: 0
   target: enemy
-  roateSpeed: 0
+  rotateSpeed: 10
   spaceBetween: 0
 --- !u!58 &-3704975290476579779
 CircleCollider2D:

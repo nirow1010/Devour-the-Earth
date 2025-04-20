@@ -30,27 +30,27 @@ public class HealthBar : MonoBehaviour
         healthNormalize = health / maxHealth * 100;
         //Debug.Log("health is: " + healthNormalize);
         if(s5 == null) {
-            if(healthNormalize < 20) {
+            if(healthNormalize <= 0) {
                 sr.sprite = s4;
-            } else if(healthNormalize < 40) {
+            } else if(healthNormalize <= 25) {
                 sr.sprite = s3;
-            } else if(healthNormalize < 60) {
+            } else if(healthNormalize <= 50) {
                 sr.sprite = s2;
-            } else if(healthNormalize < 80) {
+            } else if(healthNormalize <= 75) {
                 sr.sprite = s1;
             }
         } else {
-            if(healthNormalize < 14) {
+            if(healthNormalize <= 0) {
                 sr.sprite = s6;
-            } else if(healthNormalize < 28) {
+            } else if(healthNormalize <= 50.0f/3) {
                 sr.sprite = s5;
-            } else if(healthNormalize < 42) {
+            } else if(healthNormalize <= 100.0f/3) {
                 sr.sprite = s4;
-            } else if(healthNormalize < 56) {
+            } else if(healthNormalize <= 50) {
                 sr.sprite = s3;
-            } else if(healthNormalize < 70) {
+            } else if(healthNormalize <= 200.0f/3) {
                 sr.sprite = s2;
-            } else if(healthNormalize < 85) {
+            } else if(healthNormalize <= 250.0f/3) {
                 sr.sprite = s1;
             }
         }

@@ -3,17 +3,17 @@ using UnityEngine;
 public class BasicPathfinding : MonoBehaviour
 {
     public GameObject goal;
-    public float speed;
 
-    public bool isenemy;
+    public float speed;
+    public bool isEnemy;
 
     public string target;
-    public float roateSpeed;
+    public float rotateSpeed;
     public float spaceBetween;
 
     void Start()
     {
-        if (isenemy)
+        if (isEnemy)
             goal = GameObject.FindWithTag("Player");
     }
 
@@ -32,8 +32,7 @@ public class BasicPathfinding : MonoBehaviour
         {
             Vector2 angleDirection = target.transform.position - transform.position;
             float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg - 90f;
-
-            transform.rotation = Quaternion.Euler(0, 0, targetAngle);
+            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), rotateSpeed * Time.deltaTime);
         }
     }
 

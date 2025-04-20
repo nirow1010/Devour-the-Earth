@@ -19,6 +19,7 @@ public class EnemyPathfinding : MonoBehaviour
 
     public float separationRadius;
     public float separationStrength;
+
     private float speed;
     public float chaseSpeed;
     public float lingerSpeed;
@@ -29,9 +30,6 @@ public class EnemyPathfinding : MonoBehaviour
     private Vector2 orbitCenter = new Vector2(20, 10);
 
     private Rigidbody2D rb;
-
-    private Collider2D playerFar;
-    private Collider2D playerClose;
 
     private Collider2D[] nearMe;
     private Collider2D[] inView;
@@ -116,13 +114,13 @@ public class EnemyPathfinding : MonoBehaviour
 
         if (target != null)
         {
-            Vector2 angleDirection = target.transform.position - transform.position;
+            Vector2 angleDirection = player.transform.position - transform.position;
             float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg - 90f;
             targetRotation = Quaternion.Euler(0, 0, targetAngle);
         }
         else
         {
-            Vector2 angleDirection = orbitCenter - (Vector2)transform.position;
+            Vector2 angleDirection = orbitCenter - (Vector2) transform.position;
             float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg + 90f;
             targetRotation = Quaternion.Euler(0, 0, targetAngle);
         }
