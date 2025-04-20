@@ -112,7 +112,7 @@ public class EnemyPathfinding : MonoBehaviour
         GameObject target = FindClosestTarget();
         Quaternion targetRotation;
 
-        if (target != null)
+        if (player != null && target != null)
         {
             Vector2 angleDirection = player.transform.position - transform.position;
             float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg - 90f;
@@ -131,14 +131,12 @@ public class EnemyPathfinding : MonoBehaviour
     Vector2 GetOrbitDirectionAroundPlayer(Vector2 center)
     {
         Vector2 toCenter = center - (Vector2)transform.position;
-        float currentDistance = toCenter.magnitude;
 
+        float currentDistance = toCenter.magnitude;
         float distanceError = currentDistance - closeRange;
 
         Vector2 tangent = new Vector2(-toCenter.y, toCenter.x).normalized;
-
         Vector2 radialCorrection = toCenter.normalized * (distanceError);
-
         Vector2 adjustedDirection = (tangent + radialCorrection).normalized;
 
         return adjustedDirection;
