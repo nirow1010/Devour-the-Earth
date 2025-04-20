@@ -28,6 +28,7 @@ public class PlayerState : State
 
         if (!IsAlive())
         {
+            
             Destroy(gameObject);
         }
 

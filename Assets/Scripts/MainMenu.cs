@@ -10,6 +10,16 @@ public class MainMenu : MonoBehaviour
         SceneManager.LoadScene("Hub");
     }
 
+    public void Regroup() 
+    {
+        SceneManager.LoadScene("Hub");
+    }
+
+    public void GoToMainMenu() 
+    {
+        SceneManager.LoadScene("Main Menu");
+    }
+
     public void QuitGame()
     {
         Application.Quit();
