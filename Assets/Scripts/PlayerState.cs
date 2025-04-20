@@ -1,5 +1,7 @@
 using System.Collections;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using System.Collections.Generic;
 
 public class PlayerState : State
 {
@@ -28,7 +30,7 @@ public class PlayerState : State
 
         if (!IsAlive())
         {
-            
+            SceneManager.LoadScene("Regroup Menu");
             Destroy(gameObject);
         }
 
