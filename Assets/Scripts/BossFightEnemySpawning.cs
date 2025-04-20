@@ -116,6 +116,8 @@ public class BossFightEnemySpawning : MonoBehaviour
         for (int i = 0; i < randCount; i++)
         {
             GameObject newEnemy = Instantiate(randEnemy.prefab);
+            yield return null; // Wait one frame so Awake/Start can run
+
             newEnemy.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 1);
             EnemyPathfinding enemyPathfinding = newEnemy.GetComponent<EnemyPathfinding>();
             enemyPathfinding.earthOrbitRadius = randOrbit;

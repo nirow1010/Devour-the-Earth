@@ -316,8 +316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeRange: 5
-  attackRange: 0
-  viewRange: 0
+  attackRange: 10
+  viewRange: 10
   separationRadius: 2
   separationStrength: 1
   chaseSpeed: 7
