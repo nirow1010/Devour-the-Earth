@@ -2311,7 +2311,19 @@ PrefabInstance:
       objectReference: {fileID: 3846292011677526000, guid: 307f91ea1fd4445f88de0c20674ac2f1, type: 3}
     - target: {fileID: 5299533153568340076, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: hitColor.a
-      value: 0.29411766
+      value: 0.39607844
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299533153568340076, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: hitColor.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299533153568340076, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: hitColor.g
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5299533153568340076, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: hitColor.r
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5299533153568340076, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: startingHealth
@@ -2756,15 +2768,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: maxSpeed
-      value: 10
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: accelRate
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: decelRate
-      value: 6
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7667084305051489345, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: m_Constraints

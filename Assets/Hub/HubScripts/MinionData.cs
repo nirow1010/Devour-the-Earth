@@ -80,7 +80,7 @@ public class MinionData : MonoBehaviour
             this.transform.SetParent(player.transform);
             minion.transform.localScale = new Vector2(2, 2);
             minion.transform.position = player.transform.position;
-            minion.GetComponent<BasicPathfinding>().goal = this.gameObject;
+            minion.GetComponent<BasicPathfinding>().SetGoal(gameObject);
 
             minion.transform.localPosition = gameLocation;
             this.transform.localPosition = gameLocation;

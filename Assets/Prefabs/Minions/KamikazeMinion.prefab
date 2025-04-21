@@ -106,10 +106,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   goal: {fileID: 0}
   speed: 7
-  isEnemy: 0
   target: enemy
   rotateSpeed: 10
-  spaceBetween: 0
+  spaceBetween: 3
 --- !u!58 &-3704975290476579779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -163,11 +162,11 @@ MonoBehaviour:
   seporationSpeed: 0
   goal: {fileID: 0}
   speed: 0
-  isenemy: 0
+  isEnemy: 0
   checkLayer:
     serializedVersion: 2
     m_Bits: 3584
-  neerMe: []
+  nearMe: []
 --- !u!50 &2539761267255915380
 Rigidbody2D:
   serializedVersion: 5

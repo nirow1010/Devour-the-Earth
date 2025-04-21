@@ -2,10 +2,10 @@ using UnityEngine;
 
 public class BasicPathfinding : MonoBehaviour
 {
-    public GameObject goal;
+    private GameObject goal;
+    private GameObject earth;
 
     public float speed;
-    public bool isEnemy;
 
     public string target;
     public float rotateSpeed;
@@ -13,8 +13,7 @@ public class BasicPathfinding : MonoBehaviour
 
     void Start()
     {
-        if (isEnemy)
-            goal = GameObject.FindWithTag("Player");
+        earth = GameObject.FindWithTag("Earth");
     }
 
     // Update is called once per frame
@@ -39,8 +38,15 @@ public class BasicPathfinding : MonoBehaviour
     GameObject FindClosestTarget()
     {
         GameObject[] targets = GameObject.FindGameObjectsWithTag(target);
+
         GameObject closest = null;
         float shortestDistance = Mathf.Infinity;
+
+        if (earth != null)
+        {
+            closest = earth;
+            shortestDistance = (transform.position - closest.transform.position).magnitude;
+        }
 
         foreach (GameObject t in targets)
         {
@@ -53,5 +59,10 @@ public class BasicPathfinding : MonoBehaviour
         }
 
         return closest;
+    }
+
+    public void SetGoal(GameObject goal)
+    {
+        this.goal = goal;
     }
 }
