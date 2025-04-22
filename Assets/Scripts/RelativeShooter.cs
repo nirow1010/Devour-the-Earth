@@ -19,7 +19,7 @@ public class RelativeShooter : MonoBehaviour
             canShoot = Time.time - lastShootTime >= delayTime;
         }
 
-        if (canShoot && (Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0)))
+        if (canShoot && Input.GetMouseButton(0))
         {
             Vector3 bulletPos = transform.position + transform.up * bulletSummonOffset;
             Quaternion bulletRot = transform.rotation;
