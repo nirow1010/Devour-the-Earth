@@ -332,10 +332,6 @@ MonoBehaviour:
   shootAtLayer:
     serializedVersion: 2
     m_Bits: 768
-  chaseWhenHit: 1
-  faceWhenHit: 1
-  chaseingDoToHit: 0
-  faceingDoToHit: 0
 --- !u!114 &2680794450249847207
 MonoBehaviour:
   m_ObjectHideFlags: 0
