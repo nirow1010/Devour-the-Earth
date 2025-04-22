@@ -180,7 +180,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5020466ae9f554bbdf9bf1800cfa4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 8
+  startingHealth: 20
   hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
 --- !u!114 &8794474179853931804
 MonoBehaviour:
@@ -316,6 +316,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeRange: 5
+  idleRange: 0
+  chaseRange: 0
   attackRange: 10
   viewRange: 10
   separationRadius: 2
@@ -324,10 +326,6 @@ MonoBehaviour:
   lingerSpeed: 5
   idleSpeed: 10
   earthOrbitRadius: 20
-  rb: {fileID: 5000845656894184631}
-  playerLayer:
-    serializedVersion: 2
-    m_Bits: 256
   avoidLayer:
     serializedVersion: 2
     m_Bits: 3840

@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5020466ae9f554bbdf9bf1800cfa4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 5
+  startingHealth: 10
   hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
 --- !u!114 &-4134114914299604125
 MonoBehaviour:
@@ -206,11 +206,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b5f5ea74497c7ea4885dfb18619f1dd3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  closeRange: 5
+  closeRange: 7.5
   idleRange: 20
   chaseRange: 15
-  attackRange: 10
-  viewRange: 10
+  attackRange: 20
+  viewRange: 20
   separationRadius: 2
   separationStrength: 3
   chaseSpeed: 7
@@ -237,10 +237,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 35
-  accelRate: 4
-  autoDestructionTime: 0.5
+  accelRate: 5
+  autoDestructionTime: 0.7
   explosionRadius: 3
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 768
-  kamikazeCounter: 3
+  kamikazeCounter: 2
