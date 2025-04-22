@@ -24,7 +24,7 @@ public class LaserBeamSkill : EnemyChargeSkill
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        Initializer(5, 4.5f, 3, 6);
+        Initializer(5, 4.5f, 2, 4);
         lineRenderer = GetComponent<LineRenderer>();
     }
 

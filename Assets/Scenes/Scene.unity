@@ -2743,7 +2743,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].easyEnemys.Array.data[0].spawnAmountLowBound
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].easyEnemys.Array.data[2].spawnAmountLowBound
@@ -2755,7 +2755,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].easyEnemys.Array.data[0].spawnAmountLowBound
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].easyEnemys.Array.data[2].spawnAmountLowBound
@@ -2799,7 +2799,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].easyEnemys.Array.data[0].spawnAmountHighBound
-      value: 3
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].easyEnemys.Array.data[2].spawnAmountHighBound
@@ -2807,7 +2807,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].hardEnemys.Array.data[0].spawnAmountHighBound
-      value: 5
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].hardEnemys.Array.data[1].spawnAmountHighBound
@@ -2815,7 +2815,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].easyEnemys.Array.data[0].spawnAmountHighBound
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].easyEnemys.Array.data[1].spawnAmountHighBound
@@ -2827,7 +2827,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].hardEnemys.Array.data[0].spawnAmountHighBound
-      value: 5
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].hardEnemys.Array.data[1].spawnAmountHighBound
@@ -2859,11 +2859,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].mediumEnemys.Array.data[0].spawnAmountLowBound
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].mediumEnemys.Array.data[0].spawnAmountLowBound
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].mediumEnemys.Array.data[1].spawnAmountLowBound
@@ -2891,11 +2891,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[1].mediumEnemys.Array.data[0].spawnAmountHighBound
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].mediumEnemys.Array.data[0].spawnAmountHighBound
-      value: 4
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[2].mediumEnemys.Array.data[1].spawnAmountHighBound
