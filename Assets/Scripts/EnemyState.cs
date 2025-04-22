@@ -23,6 +23,7 @@ public class EnemyState : State
     private IEnumerator ReactOnHit()
     {
         sr.color = hitColor;
+        GetComponent<EnemyPathfinding>().setAttackingDoToHit();
 
         yield return new WaitForSeconds(0.2f);
 
