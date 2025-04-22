@@ -1349,7 +1349,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1300919415}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
   m_Name: 
@@ -2264,27 +2264,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: difficultyWeight.Array.data[0].easy
-      value: 5
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: difficultyWeight.Array.data[0].hard
-      value: 3
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: difficultyWeight.Array.data[1].easy
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: difficultyWeight.Array.data[1].hard
       value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: difficultyWeight.Array.data[2].easy
+      propertyPath: difficultyWeight.Array.data[1].easy
       value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: difficultyWeight.Array.data[2].hard
+      propertyPath: difficultyWeight.Array.data[1].hard
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: difficultyWeight.Array.data[2].easy
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: difficultyWeight.Array.data[2].hard
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: dificultyWight.Array.data[0].medium
@@ -2292,15 +2292,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: difficultyWeight.Array.data[0].medium
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: difficultyWeight.Array.data[1].medium
-      value: 3
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: difficultyWeight.Array.data[2].medium
-      value: 4
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseEnemyOptions.Array.data[0].easyEnemys.Array.size
@@ -2754,7 +2754,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: maxSpeed
-      value: 12
+      value: 15
       objectReference: {fileID: 0}
     - target: {fileID: 6885341336972036174, guid: 034cf872971e01f42b9bafc2246ab811, type: 3}
       propertyPath: accelRate
