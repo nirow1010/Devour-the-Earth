@@ -14,9 +14,9 @@ public class ControllerScript : MonoBehaviour
             minionNodes = GameObject.Find("MinionsList").transform;
             collectedMinionNodes = GameObject.Find("CollectedList").transform;
         }
-        catch (Exception e)
+        catch
         {
-            Debug.Log(e);
+            Debug.Log("Collection Lists are Missing (they are added in hub)");
         }
     }
 
@@ -43,10 +43,15 @@ public class ControllerScript : MonoBehaviour
 
             if (scene == "Hub")
                 minion.GetComponent<MinionData>().hubStart = true;
-            if(scene == "Scene")
+            if (scene == "Scene")
+            {
                 minion.GetComponent<MinionData>().gameStart = true;
+            }
+            if (scene == "Main Menu")
+            {
+                Destroy(minion);
+            }
         }
 
     }
-
 }
