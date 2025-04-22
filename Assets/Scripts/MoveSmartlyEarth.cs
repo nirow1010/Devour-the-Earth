@@ -13,7 +13,7 @@ public class MoveSmartlyEarth : MonoBehaviour
         }
         else
         {
-            transform.Translate(obj.position.x - transform.position.x, obj.position.y - transform.position.y - 12, 0);
+            transform.Translate(obj.position.x - transform.position.x - 4, obj.position.y - transform.position.y - 12, 0);
         }
     }
 }

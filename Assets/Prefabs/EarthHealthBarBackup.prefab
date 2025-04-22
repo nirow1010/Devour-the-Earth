@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &4747510180116645150
+--- !u!1 &3026469272588073370
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,24 +8,25 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 7832963421838092486}
-  - component: {fileID: 7792437841076464577}
-  - component: {fileID: -5471795182315596458}
-  - component: {fileID: 2036242147345262047}
+  - component: {fileID: 6594516470346971961}
+  - component: {fileID: 5456978461321926651}
+  - component: {fileID: 8511752502996880260}
+  - component: {fileID: 8512972291614721218}
+  - component: {fileID: 1759058866616000986}
   m_Layer: 0
-  m_Name: EarthHealthBar
+  m_Name: EarthHealthBarBackup
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &7832963421838092486
+--- !u!4 &6594516470346971961
 Transform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747510180116645150}
+  m_GameObject: {fileID: 3026469272588073370}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: -2}
@@ -34,13 +35,13 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!212 &7792437841076464577
+--- !u!212 &5456978461321926651
 SpriteRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747510180116645150}
+  m_GameObject: {fileID: 3026469272588073370}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -89,20 +90,20 @@ SpriteRenderer:
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
---- !u!114 &-5471795182315596458
+--- !u!114 &8511752502996880260
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747510180116645150}
+  m_GameObject: {fileID: 3026469272588073370}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 09035534b725c467d973f2845679a160, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   script: {fileID: 0}
-  sr: {fileID: 7792437841076464577}
+  sr: {fileID: 5456978461321926651}
   s0: {fileID: 1955178077, guid: f1d6d54b9fd334f71b4dd46740359c1f, type: 3}
   s1: {fileID: -1747396348, guid: f1d6d54b9fd334f71b4dd46740359c1f, type: 3}
   s2: {fileID: 735363116, guid: f1d6d54b9fd334f71b4dd46740359c1f, type: 3}
@@ -110,13 +111,26 @@ MonoBehaviour:
   s4: {fileID: 235618130, guid: f1d6d54b9fd334f71b4dd46740359c1f, type: 3}
   s5: {fileID: 0}
   s6: {fileID: 0}
---- !u!114 &2036242147345262047
+--- !u!114 &8512972291614721218
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 4747510180116645150}
+  m_GameObject: {fileID: 3026469272588073370}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdd5ee2165d8c4ab58bdb485e247e713, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  obj: {fileID: 0}
+--- !u!114 &1759058866616000986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3026469272588073370}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cdd5ee2165d8c4ab58bdb485e247e713, type: 3}
