@@ -1084,7 +1084,7 @@ PrefabInstance:
     - target: {fileID: 643445770383189499, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
       propertyPath: shipType
       value: 
-      objectReference: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
+      objectReference: {fileID: 624422218974023433, guid: 7f6c557023c7f471ab8ecf632f63a76c, type: 3}
     - target: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
       propertyPath: m_Name
       value: MinionNode
@@ -1528,7 +1528,7 @@ PrefabInstance:
     - target: {fileID: 643445770383189499, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
       propertyPath: shipType
       value: 
-      objectReference: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
+      objectReference: {fileID: 624422218974023433, guid: 7f6c557023c7f471ab8ecf632f63a76c, type: 3}
     - target: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
       propertyPath: m_Name
       value: MinionNode (1)

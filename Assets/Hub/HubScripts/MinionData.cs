@@ -52,7 +52,8 @@ public class MinionData : MonoBehaviour
             GameObject sticker = Instantiate(StickerPrefab);
             sticker.transform.SetParent(canvas.transform, true);
             sticker.GetComponent<RectTransform>().localScale = new Vector2(2,2);
-            sticker.GetComponentInChildren<UnityEngine.UI.Image>().sprite = shipType.GetComponent<SpriteRenderer>().sprite;
+            //sticker.GetComponentInChildren<UnityEngine.UI.Image>().sprite = shipType.GetComponent<SpriteRenderer>().sprite;
+            sticker.GetComponentInChildren<UnityEngine.UI.Image>().sprite = shipType.GetComponentInChildren<SpriteRenderer>().sprite;
 
         if (active)
         {
@@ -80,7 +81,7 @@ public class MinionData : MonoBehaviour
             this.transform.SetParent(player.transform);
             minion.transform.localScale = new Vector2(2, 2);
             minion.transform.position = player.transform.position;
-            minion.GetComponent<BasicPathfinding>().SetGoal(gameObject);
+            minion.GetComponentInChildren<BasicPathfinding>().SetGoal(gameObject);
 
             minion.transform.localPosition = gameLocation;
             this.transform.localPosition = gameLocation;
