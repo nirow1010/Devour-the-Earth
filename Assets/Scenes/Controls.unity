@@ -154,8 +154,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.17971802, y: -0.65414476}
-  m_SizeDelta: {x: 5.0613003, y: 1.3083}
+  m_AnchoredPosition: {x: 0.00000020862, y: 2.96}
+  m_SizeDelta: {x: 9.3725, y: 1.3083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &109595012
 MonoBehaviour:
@@ -190,7 +190,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Auto shoots at enemy
+  m_text: 'Ally: Auto shoots at enemy. Slightly tanky
+
+    Enemy: Stays in orbit
+    & shoots at player'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -224,7 +227,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -926,8 +929,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.13000488, y: 6.200012}
-  m_SizeDelta: {x: 8.8109, y: 1.3083}
+  m_AnchoredPosition: {x: 0.13000488, y: 7.866089}
+  m_SizeDelta: {x: 8.8109, y: 4.6404}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &452265784
 MonoBehaviour:
@@ -1472,8 +1475,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.17971802, y: -0.65414476}
-  m_SizeDelta: {x: 5.0613003, y: 1.3083}
+  m_AnchoredPosition: {x: -0.00000023842, y: 3.83}
+  m_SizeDelta: {x: 21.0316, y: 1.3083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &541225284
 MonoBehaviour:
@@ -1508,7 +1511,8 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Auto shoots at enemy
+  m_text: "Ally: Hold #1 key for 3 secs to semi-charge. Hold for 6 secs to full charge.
+    \nRelease to shoot.\nEnemy: Shoots charge beams at player"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1542,7 +1546,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -1622,7 +1626,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.06, y: -0.65415}
+  m_AnchoredPosition: {x: -0.00000042096, y: 2.83}
   m_SizeDelta: {x: 6.1088, y: 1.3083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &548384886
@@ -1775,8 +1779,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6.149994}
-  m_SizeDelta: {x: 8.8434, y: 1.3083}
+  m_AnchoredPosition: {x: 0, y: 7.92099}
+  m_SizeDelta: {x: 8.8434, y: 4.8503}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &598168526
 MonoBehaviour:
@@ -2316,9 +2320,9 @@ Camera:
   m_NormalizedViewPortRect:
     serializedVersion: 2
     x: 0
-    y: 0.0049079754
-    width: 1.9999999
-    height: 2.1006136
+    y: 0
+    width: 1
+    height: 1
   near clip plane: 0.3
   far clip plane: 1000
   field of view: 60
@@ -3076,8 +3080,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.17971802, y: -0.65414476}
-  m_SizeDelta: {x: 5.0613003, y: 1.3083}
+  m_AnchoredPosition: {x: -0.00000047683, y: 2.72}
+  m_SizeDelta: {x: 10.4067, y: 1.3083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1393823866
 MonoBehaviour:
@@ -3112,7 +3116,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Auto shoots at enemy
+  m_text: 'Ally: Auto shoots at enemy. Slightly tanky
+
+    Enemy: Stays in orbit
+    & shoots straight ahead'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -3146,7 +3153,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
@@ -3550,8 +3557,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6.0599976}
-  m_SizeDelta: {x: 8.8438, y: 1.3083}
+  m_AnchoredPosition: {x: 0, y: 6.1393127}
+  m_SizeDelta: {x: 8.8438, y: 4.4192}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1539895913
 MonoBehaviour:
@@ -3701,8 +3708,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0, y: 6.1700134}
-  m_SizeDelta: {x: 10.6845, y: 1.3083}
+  m_AnchoredPosition: {x: 0, y: 8.458496}
+  m_SizeDelta: {x: 10.6845, y: 5.8854}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1557127165
 MonoBehaviour:
@@ -4140,8 +4147,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
-  m_AnchoredPosition: {x: 0.16998291, y: 6.25}
-  m_SizeDelta: {x: 6.6994, y: 1.3083}
+  m_AnchoredPosition: {x: 0.16998291, y: 7.898712}
+  m_SizeDelta: {x: 6.6994, y: 4.6058}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1836641057
 MonoBehaviour:
@@ -4784,8 +4791,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0}
   m_AnchorMax: {x: 0.5, y: 0}
-  m_AnchoredPosition: {x: 0.17971802, y: -0.65414476}
-  m_SizeDelta: {x: 5.0613003, y: 1.3083}
+  m_AnchoredPosition: {x: -0.00000008940697, y: 2.55}
+  m_SizeDelta: {x: 12.213, y: 1.3083}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &2044381858
 MonoBehaviour:
@@ -4820,7 +4827,10 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Auto shoots at enemy
+  m_text: 'Ally: Press 1 to lock onto enemy &  explode on contact
+
+    Enemy: Homes
+    in on player & explodes on contact'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -4854,7 +4864,7 @@ MonoBehaviour:
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_HorizontalAlignment: 1
+  m_HorizontalAlignment: 2
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
