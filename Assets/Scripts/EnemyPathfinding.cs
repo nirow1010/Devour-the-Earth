@@ -91,7 +91,8 @@ public class EnemyPathfinding : MonoBehaviour
         {
             case EnemyState.Idle:
                 farRange = attackRange;
-                moveDir = GetOrbitDirectionAroundEarth(centerObject.position);
+                if (centerObject != null)
+                    moveDir = GetOrbitDirectionAroundEarth(centerObject.position);
                 speed = idleSpeed;
                 break;
             case EnemyState.Chase:

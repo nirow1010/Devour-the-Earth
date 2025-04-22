@@ -243,5 +243,5 @@ MonoBehaviour:
   explosionLayerMask:
     serializedVersion: 2
     m_Bits: 768
-  homingRotationSpeed: 2.2
+  homingRotationSpeed: 3
   kamikazeCounter: 2
