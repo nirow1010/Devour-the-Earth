@@ -202,8 +202,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   closeRange: 0
-  idleRange: 0
-  chaseRange: 0
   attackRange: 0
   viewRange: 10
   separationRadius: 2
@@ -218,6 +216,10 @@ MonoBehaviour:
   shootAtLayer:
     serializedVersion: 2
     m_Bits: 768
+  chaseWhenHit: 0
+  faceWhenHit: 1
+  chaseingDoToHit: 0
+  faceingDoToHit: 0
 --- !u!50 &6534857366728246793
 Rigidbody2D:
   serializedVersion: 5

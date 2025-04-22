@@ -35,6 +35,11 @@ public class EnemyPathfinding : MonoBehaviour
     public LayerMask avoidLayer;
     public LayerMask shootAtLayer;
 
+    public bool chaseWhenHit;
+    public bool faceWhenHit;
+    private bool chaseingDoToHit;
+    private bool faceingDoToHit;
+
     private void Start()
     {
         GameObject playerObj = GameObject.FindWithTag("Player");
@@ -57,14 +62,14 @@ public class EnemyPathfinding : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.Idle:
-                if (inEnterChase)
+                if (inEnterChase || chaseingDoToHit)
                     currentState = EnemyState.Chase;
                 break;
 
             case EnemyState.Chase:
                 if (inClose)
                     currentState = EnemyState.Close;
-                else if (!inExitChase)
+                else if (!inExitChase && !chaseingDoToHit)
                     currentState = EnemyState.Idle;
                 break;
 
@@ -98,6 +103,8 @@ public class EnemyPathfinding : MonoBehaviour
                 Vector2 idleDrift = Random.insideUnitCircle * 0.2f;
                 moveDir = (orbit + idleDrift).normalized;
                 speed = lingerSpeed;
+                chaseingDoToHit = false;
+                faceingDoToHit = false;
                 break;
         }
 
@@ -190,19 +197,37 @@ public class EnemyPathfinding : MonoBehaviour
                     closest = obj.gameObject;
                 }
             }
+            if (obj.CompareTag("Player") && !chaseWhenHit)
+            {
+                faceingDoToHit = false;
+            }
+        }
+        if (faceingDoToHit)
+        {
+                closest = player.gameObject;
         }
         return closest;
     }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
-        Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.DrawWireSphere(transform.position, viewRange);
         Gizmos.DrawWireSphere(transform.position, closeRange);
         Gizmos.DrawWireSphere(transform.position, separationRadius);
     }
 
+    public void setAttackingDoToHit()
+    {
+        if(chaseWhenHit)
+            chaseingDoToHit = true;
+        if (faceWhenHit)
+            faceingDoToHit = true;
+    }
+    public bool getFaceingDoToHit()
+    {
+        return faceingDoToHit;
+    }
     public bool IsOnFight()
     {
         return inView != null && inView.Length > 0;
