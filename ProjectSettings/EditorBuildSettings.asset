@@ -20,5 +20,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Regroup Menu.unity
     guid: d09353d5cce0b47f5ba246903034a20a
+  - enabled: 1
+    path: Assets/Scenes/Controls.unity
+    guid: f9bb0b591890b44f69d95ceb0d4da92b
   m_configObjects: {}
   m_UseUCBPForAssetBundles: 0
