@@ -18,10 +18,13 @@ public class KamikazeSkill : EnemyInstantSkill
     private bool onKamikaze = false;
     private float counter;
 
+    private GameObject kamikazeTarget;
+    public float homingRotationSpeed = 1.5f;
+
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        Initializer(20f, 0f);
+        Initializer(12f, 0f);
         rb = GetComponent<Rigidbody2D>();
     }
 
@@ -32,6 +35,14 @@ public class KamikazeSkill : EnemyInstantSkill
             Vector2 moveDir = transform.up;
             Vector2 moveForce = (moveDir * maxLaunchSpeed - rb.linearVelocity) * accelRate;
             rb.AddForce(moveForce, ForceMode2D.Force);
+
+            if (kamikazeTarget != null)
+            {
+                Vector2 targetDirection = kamikazeTarget.transform.position - transform.position;
+                Vector3 targetRotation = new Vector3(0, 0, Mathf.Rad2Deg * Mathf.Atan2(-targetDirection.x, targetDirection.y));
+                Quaternion targetRot = Quaternion.Euler(targetRotation);
+                transform.rotation = Quaternion.Lerp(transform.rotation, targetRot, homingRotationSpeed * Time.fixedDeltaTime);
+            }
 
             Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.9f, explosionLayerMask);
 
@@ -79,5 +90,10 @@ public class KamikazeSkill : EnemyInstantSkill
     protected override bool IsSkillUseTriggered()
     {
         return true; // placeholder
+    }
+
+    protected void SetKamikazeTarget(GameObject target)
+    {
+        kamikazeTarget = target;
     }
 }

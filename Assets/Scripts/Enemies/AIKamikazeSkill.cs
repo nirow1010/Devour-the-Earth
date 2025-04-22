@@ -16,6 +16,7 @@ public class AIKamikazeSkill : KamikazeSkill
 
     public override void UseSkill()
     {
+        SetKamikazeTarget(enemyPathfinding.GetTarget());
         enemyPathfinding.enabled = false;
         base.UseSkill();
     }

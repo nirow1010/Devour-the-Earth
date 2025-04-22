@@ -35,10 +35,7 @@ public class EnemyPathfinding : MonoBehaviour
     public LayerMask avoidLayer;
     public LayerMask shootAtLayer;
 
-    public bool chaseWhenHit;
-    public bool faceWhenHit;
-    private bool chaseingDoToHit;
-    private bool faceingDoToHit;
+    private GameObject target;
 
     private void Start()
     {
@@ -62,14 +59,14 @@ public class EnemyPathfinding : MonoBehaviour
         switch (currentState)
         {
             case EnemyState.Idle:
-                if (inEnterChase || chaseingDoToHit)
+                if (inEnterChase)
                     currentState = EnemyState.Chase;
                 break;
 
             case EnemyState.Chase:
                 if (inClose)
                     currentState = EnemyState.Close;
-                else if (!inExitChase && !chaseingDoToHit)
+                else if (!inExitChase)
                     currentState = EnemyState.Idle;
                 break;
 
@@ -103,8 +100,6 @@ public class EnemyPathfinding : MonoBehaviour
                 Vector2 idleDrift = Random.insideUnitCircle * 0.2f;
                 moveDir = (orbit + idleDrift).normalized;
                 speed = lingerSpeed;
-                chaseingDoToHit = false;
-                faceingDoToHit = false;
                 break;
         }
 
@@ -114,7 +109,7 @@ public class EnemyPathfinding : MonoBehaviour
         Vector2 smoothedVelocity = Vector2.SmoothDamp(rb.linearVelocity, finalMove * speed, ref oldVelocity, 0.1f);
         rb.linearVelocity = smoothedVelocity;
 
-        GameObject target = FindClosestTarget();
+        target = FindClosestTarget();
         Quaternion targetRotation;
 
         if (player != null && target != null)
@@ -197,39 +192,26 @@ public class EnemyPathfinding : MonoBehaviour
                     closest = obj.gameObject;
                 }
             }
-            if (obj.CompareTag("Player") && !chaseWhenHit)
-            {
-                faceingDoToHit = false;
-            }
-        }
-        if (faceingDoToHit)
-        {
-                closest = player.gameObject;
         }
         return closest;
     }
     void OnDrawGizmosSelected()
     {
         Gizmos.color = Color.yellow;
+        Gizmos.DrawWireSphere(transform.position, chaseRange);
         Gizmos.DrawWireSphere(transform.position, attackRange);
         Gizmos.DrawWireSphere(transform.position, viewRange);
         Gizmos.DrawWireSphere(transform.position, closeRange);
         Gizmos.DrawWireSphere(transform.position, separationRadius);
     }
 
-    public void setAttackingDoToHit()
-    {
-        if(chaseWhenHit)
-            chaseingDoToHit = true;
-        if (faceWhenHit)
-            faceingDoToHit = true;
-    }
-    public bool getFaceingDoToHit()
-    {
-        return faceingDoToHit;
-    }
     public bool IsOnFight()
     {
         return inView != null && inView.Length > 0;
+    }
+
+    public GameObject GetTarget()
+    {
+        return target;
     }
 }

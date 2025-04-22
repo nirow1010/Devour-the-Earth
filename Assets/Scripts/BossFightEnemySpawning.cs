@@ -38,25 +38,7 @@ public class BossFightEnemySpawning : MonoBehaviour
         public int hard;
     }
 
-    public int totalPhase
-    {
-        get
-        {
-            return totalPhase;
-        }
-        set
-        {
-            List<EnemyLevels> temp1 = new List<EnemyLevels>(value);
-            TimeRange[] temp2 = new TimeRange[value];
-            DifficultyWeight[] temp3 = new DifficultyWeight[value];
-
-            for (int i = 0; i < value || i < totalPhase; i++)
-            {
-
-            }
-        }
-    }
-
+    public int totalPhase;
     public List<EnemyLevels> phaseEnemyOptions;
     public TimeRange[] timeBetween;
     public DifficultyWeight[] difficultyWeight;
