@@ -1,4 +1,3 @@
-using NUnit.Framework;
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
@@ -15,7 +14,6 @@ public class BossFightEnemySpawning : MonoBehaviour
 
         public int spawnAmountHighBound;
         public int spawnAmountLowBound;
-
     }
 
     [System.Serializable]
@@ -40,11 +38,30 @@ public class BossFightEnemySpawning : MonoBehaviour
         public int hard;
     }
 
-    public int totalPhase;
+    public int totalPhase
+    {
+        get
+        {
+            return totalPhase;
+        }
+        set
+        {
+            List<EnemyLevels> temp1 = new List<EnemyLevels>(value);
+            TimeRange[] temp2 = new TimeRange[value];
+            DifficultyWeight[] temp3 = new DifficultyWeight[value];
+
+            for (int i = 0; i < value || i < totalPhase; i++)
+            {
+
+            }
+        }
+    }
+
     public List<EnemyLevels> phaseEnemyOptions;
-    public EarthState earthState;
     public TimeRange[] timeBetween;
-    public DifficultyWeight[] dificultyWight;
+    public DifficultyWeight[] difficultyWeight;
+
+    public EarthState earthState;
 
     private int phase;
     private System.Random rand;
@@ -79,15 +96,15 @@ public class BossFightEnemySpawning : MonoBehaviour
     IEnumerator SpawnEnemy()
     {
         readlyToSpawn = false;
-        int wightTotal = dificultyWight[phase].easy + dificultyWight[phase].medium + dificultyWight[phase].hard;
+        int wightTotal = difficultyWeight[phase].easy + difficultyWeight[phase].medium + difficultyWeight[phase].hard;
         int randDificulty = rand.Next(0, wightTotal);
         List<Enemy> enemies;
 
-        if (randDificulty < dificultyWight[phase].easy)
+        if (randDificulty < difficultyWeight[phase].easy)
         {
             enemies = phaseEnemyOptions[phase].easyEnemys;
         }
-        else if (randDificulty < dificultyWight[phase].easy + dificultyWight[phase].medium)
+        else if (randDificulty < difficultyWeight[phase].easy + difficultyWeight[phase].medium)
         {
             enemies = phaseEnemyOptions[phase].mediumEnemys;
         }

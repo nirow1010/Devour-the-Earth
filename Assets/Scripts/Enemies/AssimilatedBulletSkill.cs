@@ -16,6 +16,6 @@ public class AssimilatedBulletSkill : BulletSkill
 
     protected override bool IsSkillUseTriggered()
     {
-        return Input.GetKey(KeyCode.Space) || Input.GetMouseButton(0);
+        return Input.GetMouseButton(0);
     }
 }

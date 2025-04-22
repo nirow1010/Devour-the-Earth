@@ -22,6 +22,6 @@ public class AssimilatedKamikazeSkill : KamikazeSkill
 
     protected override bool IsSkillUseTriggered()
     {
-        return Input.GetKeyDown(KeyCode.K); // placeholder
+        return Input.GetKeyDown(KeyCode.Keypad1); // placeholder
     }
 }

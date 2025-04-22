@@ -10,6 +10,6 @@ public class AssimilatedLaserBeamSkill : LaserBeamSkill
     // Connect you AI skill charge release to here
     protected override bool IsSkillChargeReleased()
     {
-        return Input.GetKeyUp(KeyCode.V);
+        return Input.GetKeyUp(KeyCode.Space);
     }
 }
