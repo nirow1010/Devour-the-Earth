@@ -28,7 +28,6 @@ public class MinionState : State
 
         if (!IsAlive())
         {
-            GetComponent<DeathScript>().assimilate();
             if (this.transform.parent != null)
                 Destroy(this.transform.parent.gameObject);
             else
