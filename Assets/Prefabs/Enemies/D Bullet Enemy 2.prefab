@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b818bc28ef1a8c49a57a1a5ec93b492, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  minionType: {fileID: 3501717510986240449, guid: 8c895e915b0a5c540b7803c9cee6fc47, type: 3}
+  minionType: {fileID: 3501717510986240449, guid: b7c44fe76fc50d44ea8974747f18275c, type: 3}
   minionNode: {fileID: 3362224128636858028, guid: b08aee385ef83bc43859a3fbf704b7a3, type: 3}
 --- !u!58 &5426604132168640782
 CircleCollider2D:

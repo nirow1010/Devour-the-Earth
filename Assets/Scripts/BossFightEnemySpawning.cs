@@ -102,8 +102,7 @@ public class BossFightEnemySpawning : MonoBehaviour
 
         for (int i = 0; i < randCount; i++)
         {
-            GameObject newEnemy = new GameObject();
-            newEnemy = Instantiate(randEnemy.prefab);
+            GameObject newEnemy = Instantiate(randEnemy.prefab);
             newEnemy.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 1);
             yield return null; // Wait one frame so Awake/Start can run
 
