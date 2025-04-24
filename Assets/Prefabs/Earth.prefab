@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 5299533153568340076}
   - component: {fileID: 6027410158107701521}
   - component: {fileID: 7190358900932469544}
+  - component: {fileID: 4510894561104571300}
   m_Layer: 11
   m_Name: Earth
   m_TagString: Earth
@@ -140,7 +141,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   startingHealth: 100
-  hitColor: {r: 1, g: 0, b: 0, a: 0.39607844}
+  hitColor: {r: 1, g: 0, b: 0, a: 0.4}
 --- !u!114 &6027410158107701521
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -232,7 +233,6 @@ MonoBehaviour:
       orbitLowBound: 10
       spawnAmountHighBound: 5
       spawnAmountLowBound: 4
-  earthState: {fileID: 5299533153568340076}
   timeBetween:
   - min: 4
     max: 8
@@ -240,20 +240,24 @@ MonoBehaviour:
     max: 7
   - min: 5
     max: 7
-  dificultyWight:
-  - easy: 10
-    medium: 0
-    hard: 0
-  - easy: 8
-    medium: 6
-    hard: 2
-  - easy: 7
-    medium: 5
-    hard: 3
-  - easy: 4
-    medium: 3
-    hard: 4
-  - easy: 5
-    medium: 5
-    hard: 5
+  difficultyWeight: []
+  earthState: {fileID: 5299533153568340076}
   readlyToSpawn: 1
+--- !u!114 &4510894561104571300
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2484900053570719145}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 93cab7ab86ca85d4da2539855659ee6c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  earthPhases:
+  - {fileID: -1182761836, guid: 1bed4f65585bc6a43b55dde2f5ca81f9, type: 3}
+  - {fileID: -114988666, guid: 1bed4f65585bc6a43b55dde2f5ca81f9, type: 3}
+  - {fileID: -1057294335, guid: 1bed4f65585bc6a43b55dde2f5ca81f9, type: 3}
+  - {fileID: -27269694, guid: 1bed4f65585bc6a43b55dde2f5ca81f9, type: 3}
+  - {fileID: 1311412355, guid: 1bed4f65585bc6a43b55dde2f5ca81f9, type: 3}
