@@ -105,11 +105,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7bcfb15433e544cad9e3daf1cd4929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 0}
   speed: 7
   target: enemy
   rotateSpeed: 10
-  spaceBetween: 3
+  spaceBetween: 0
 --- !u!58 &-3704975290476579779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -161,9 +160,7 @@ MonoBehaviour:
   spaceBetween: 5
   checkRadius: 10
   seporationSpeed: 0
-  goal: {fileID: 0}
   speed: 0
-  isEnemy: 0
   checkLayer:
     serializedVersion: 2
     m_Bits: 3584
@@ -236,7 +233,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 1, g: 1, b: 1, a: 1}
+      key0: {r: 0.11764707, g: 0.7372549, b: 0.45098042, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -261,7 +258,7 @@ LineRenderer:
       atime6: 0
       atime7: 0
       m_Mode: 0
-      m_ColorSpace: -1
+      m_ColorSpace: 0
       m_NumColorKeys: 2
       m_NumAlphaKeys: 2
     numCornerVertices: 0
@@ -287,6 +284,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2d566547cecee17499bdb4af8b987f8d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 5
+  cooldown: 4.5
+  cooldownRandModifier: 0
   laserFirePoint: {fileID: 2605477533920118849}
   laserHitLayers:
     serializedVersion: 2

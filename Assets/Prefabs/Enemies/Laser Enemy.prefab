@@ -344,6 +344,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1e18ac7ec85262043b20d3695d100d7c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 5
+  cooldown: 4.5
+  cooldownRandModifier: 0
   laserFirePoint: {fileID: 1687777073741839171}
   laserHitLayers:
     serializedVersion: 2

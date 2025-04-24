@@ -235,6 +235,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b190ebdcb84c0d744921b08882990563, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 12
+  cooldown: 0
+  cooldownRandModifier: 0
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 25
   accelRate: 5

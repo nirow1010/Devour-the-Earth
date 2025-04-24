@@ -171,9 +171,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ef7bcfb15433e544cad9e3daf1cd4929, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  goal: {fileID: 0}
   speed: 7
-  isEnemy: 0
   target: enemy
   rotateSpeed: 10
   spaceBetween: 0
@@ -209,6 +207,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64d2f82113064b44b4eeade5c0deaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 0.5
+  cooldown: 1.5
+  cooldownRandModifier: 0.5
   bulletFirePoint: {fileID: 3938147062789534068}
   bulletSpeed: 25
   bulletPrefab: {fileID: 1191537186931966177, guid: d8720e51d2a629345ad76ecd2e7259b4, type: 3}

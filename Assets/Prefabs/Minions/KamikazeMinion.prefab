@@ -107,7 +107,7 @@ MonoBehaviour:
   speed: 7
   target: enemy
   rotateSpeed: 10
-  spaceBetween: 3
+  spaceBetween: 0
 --- !u!58 &-3704975290476579779
 CircleCollider2D:
   m_ObjectHideFlags: 0
@@ -203,6 +203,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0678a159c33cd9440997759f71f9834a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  baseDamage: 12
+  cooldown: 0
+  cooldownRandModifier: 0
   explosionParticle: {fileID: 3557155110858833212, guid: e066746fd7b9cb249b0d88aea9752083, type: 3}
   maxLaunchSpeed: 15
   accelRate: 5

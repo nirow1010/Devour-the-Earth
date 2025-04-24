@@ -5,6 +5,7 @@ public abstract class EnemyInstantSkill : EnemySkill
 {
     private float lastShootTime;
 
+    private float randNum;
     protected void Initializer(float baseDamage, float cooldown)
     {
         SetBaseDamage(baseDamage);
@@ -12,9 +13,17 @@ public abstract class EnemyInstantSkill : EnemySkill
         lastShootTime = -cooldown;
     }
 
+    protected void Initializer(float baseDamage, float cooldown, float modifier)
+    {
+        SetBaseDamage(baseDamage);
+        SetCooldown(cooldown);
+        SetCooldownModifier(modifier);
+        lastShootTime = -cooldown;
+    }
     public override void UseSkill()
     {
-        lastShootTime = Time.time;
+        randNum = UnityEngine.Random.Range(-GetCooldownModifier(), GetCooldownModifier());
+        lastShootTime = Time.time + randNum;
     }
 
     public override bool IsSkillConditionMet()

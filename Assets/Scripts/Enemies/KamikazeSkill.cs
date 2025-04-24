@@ -24,7 +24,7 @@ public class KamikazeSkill : EnemyInstantSkill
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     protected virtual void Start()
     {
-        Initializer(12f, 0f);
+        Initializer(GetDamage(), 0f, 0f);
         rb = GetComponent<Rigidbody2D>();
     }
 
