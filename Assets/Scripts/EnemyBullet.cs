@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class EnemyBullet : MonoBehaviour
 {
+    [SerializeField] GameObject hitEffect;
     private float damage = 1;
     private float speed = 5;
 
@@ -23,6 +24,8 @@ public class EnemyBullet : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
+        Instantiate(hitEffect, transform.position, transform.rotation);
+
         State state = collider.gameObject.GetComponent<State>();
         EarthState earth = collider.gameObject.GetComponent<EarthState>();
 

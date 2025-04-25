@@ -7,6 +7,6 @@ public class SelfDestructiveEffect : MonoBehaviour
     {
         ParticleSystem parts = GetComponent<ParticleSystem>();
         float totalDuration = parts.main.duration + parts.main.startLifetime.constantMax;
-        Destroy(this, totalDuration);
+        Destroy(gameObject, totalDuration);
     }
 }

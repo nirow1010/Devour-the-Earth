@@ -2,6 +2,7 @@ using UnityEngine;
 
 public class AssimilationBullet : MonoBehaviour
 {
+    [SerializeField] GameObject hitEffect;
     [SerializeField] private AudioClip collisionAudio;
     private AudioSource audioSource;
     private float damage = 1;
@@ -30,6 +31,8 @@ public class AssimilationBullet : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+        Instantiate(hitEffect, transform.position + transform.up * 0.5f, transform.rotation);
+
         // Placeholder for collision audio
         audioSource.clip = collisionAudio;
         audioSource.Play();

@@ -167,6 +167,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8b93157a95d4ff64e97ef53fd6c6d61c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffect: {fileID: 1733224782976231188, guid: 17de3cc5a9840ae4888270bd019aebe4, type: 3}
   collisionAudio: {fileID: 8300000, guid: a7065bae17bed48ca8cf48ba9a256578, type: 3}
 --- !u!82 &6762414081750824537
 AudioSource:
