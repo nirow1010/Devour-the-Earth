@@ -46,16 +46,9 @@ public class KamikazeSkill : EnemyInstantSkill
 
             Collider2D hit = Physics2D.OverlapCircle(transform.position, 0.9f, explosionLayerMask);
 
-            if (hit != null)
+            if (hit != null || Time.time - counter >= autoDestructionTime)
             {
                 Explode();
-                Destroy(gameObject);
-            }
-
-            if (Time.time - counter >= autoDestructionTime)
-            {
-                Explode();
-                Destroy(gameObject);
             }
         }
     }
@@ -85,6 +78,11 @@ public class KamikazeSkill : EnemyInstantSkill
                 state.TakeDamage(GetDamage());
             }
         }
+
+        if (transform.parent.gameObject != null)
+            Destroy(transform.parent.gameObject);
+        else
+            Destroy(gameObject);
     }
 
     protected override bool IsSkillUseTriggered()

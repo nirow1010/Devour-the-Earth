@@ -1,22 +1,22 @@
 using UnityEngine;
 
-[RequireComponent (typeof(BasicPathfinding)), RequireComponent (typeof(Seporation))]
+[RequireComponent (typeof(BasicPathfinding)), RequireComponent (typeof(Separation))]
 public class AssimilatedKamikazeSkill : KamikazeSkill
 {
     private BasicPathfinding enemyPathfinding;
-    private Seporation seporation;
+    private Separation separation;
 
     protected override void Start()
     {
         enemyPathfinding = GetComponent<BasicPathfinding>();
-        seporation = GetComponent<Seporation>();
+        separation = GetComponent<Separation>();
         base.Start();
     }
 
     public override void UseSkill()
     {
         enemyPathfinding.enabled = false;
-        seporation.enabled = false;
+        separation.enabled = false;
         base.UseSkill();
     }
 

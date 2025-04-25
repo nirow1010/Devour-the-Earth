@@ -10,7 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 3497426241035376875}
   m_Layer: 0
-  m_Name: KamiMinionSpawn
+  m_Name: Kamikaze Spawn
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -162,6 +162,18 @@ PrefabInstance:
     - target: {fileID: 3501717510986240449, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
       propertyPath: m_Name
       value: KamikazeMinion
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800813724875066698, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800813724875066698, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
+      propertyPath: maxLaunchSpeed
+      value: 24
+      objectReference: {fileID: 0}
+    - target: {fileID: 8800813724875066698, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
+      propertyPath: homingRotationSpeed
+      value: 5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

@@ -1,7 +1,7 @@
 using System.Linq;
 using UnityEngine;
 
-public class Seporation : MonoBehaviour
+public class Separation : MonoBehaviour
 {
     public float spaceBetween;
     public float checkRadius;

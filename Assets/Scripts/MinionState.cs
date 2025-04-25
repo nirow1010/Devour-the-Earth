@@ -28,8 +28,8 @@ public class MinionState : State
 
         if (!IsAlive())
         {
-            if (this.transform.parent != null)
-                Destroy(this.transform.parent.gameObject);
+            if (transform.parent != null)
+                Destroy(transform.parent.gameObject);
             else
                 Destroy(gameObject);
         }

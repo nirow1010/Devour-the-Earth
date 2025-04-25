@@ -257,9 +257,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 02023c98ec02466429a439efb9f85b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 0.5
+  baseDamage: 1
   cooldown: 1.5
   cooldownRandModifier: 0
   bulletFirePoint: {fileID: 72480990400689009}
-  bulletSpeed: 15
+  bulletSpeed: 25
   bulletPrefab: {fileID: 2782712288049884434, guid: 08310242dfdd0684eb4b27cf891e73b5, type: 3}

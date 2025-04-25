@@ -41,6 +41,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 109317492305671538}
     m_Modifications:
+    - target: {fileID: -7722014762478133403, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
+      propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: -4134114914299604125, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
       propertyPath: minionType
       value: 
