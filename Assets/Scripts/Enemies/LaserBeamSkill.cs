@@ -6,7 +6,6 @@ using UnityEngine;
 [RequireComponent(typeof(LineRenderer))]
 public class LaserBeamSkill : EnemyChargeSkill
 {
-    [SerializeField] Transform laserFirePoint;
     public LayerMask laserHitLayers;
     // need charging animation
 
@@ -37,9 +36,9 @@ public class LaserBeamSkill : EnemyChargeSkill
     {
         float laserWidth = baseLaserWidth * (1 + laserSizeIncreaseRatio * (GetChargeDuration() - GetMinChargeTime()));
 
-        StartCoroutine(DrawFadingLaser(laserFirePoint.position + transform.up * 0.5f, laserFirePoint.position + transform.up * laserDistance, laserWidth));
+        StartCoroutine(DrawFadingLaser(GetFirePoint().position + transform.up * 0.5f, GetFirePoint().position + transform.up * laserDistance, laserWidth));
 
-        RaycastHit2D[] hits = Physics2D.CircleCastAll(laserFirePoint.position, laserWidth / 2, transform.up, laserDistance, laserHitLayers);
+        RaycastHit2D[] hits = Physics2D.CircleCastAll(GetFirePoint().position, laserWidth / 2, transform.up, laserDistance, laserHitLayers);
 
         foreach (RaycastHit2D hit in hits)
         {

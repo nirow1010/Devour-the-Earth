@@ -2,11 +2,15 @@ using UnityEngine;
 
 public abstract class EnemyChargeSkill : EnemySkill
 {
+    [SerializeField] GameObject chargeEffect;
+    [SerializeField] Transform firePoint;
+
     private float minChargeTime;
     private float maxChargeTime;
     private float chargeTimer;
     private float chargeDuration;
     private float lastShootTime;
+    private GameObject tempChargeEffect;
 
     protected void Initializer(float baseDamage, float cooldown, float minChargeTime, float maxChargeTime)
     {
@@ -14,6 +18,16 @@ public abstract class EnemyChargeSkill : EnemySkill
         SetCooldown(cooldown);
         SetChargeInterval(minChargeTime, maxChargeTime);
         lastShootTime = -cooldown;
+    }
+
+    protected GameObject GetChargeEffect()
+    {
+        return chargeEffect;
+    }
+
+    protected Transform GetFirePoint()
+    {
+        return firePoint;
     }
 
     protected void SetChargeInterval(float min, float max)
@@ -56,11 +70,17 @@ public abstract class EnemyChargeSkill : EnemySkill
         {
             if (IsSkillChargeReleased())
             {
+                Destroy(tempChargeEffect);
                 isMet = chargeTimer >= minChargeTime;
                 chargeTimer = 0;
             }
             else if (IsSkillChargeTriggered())
             {
+                if (tempChargeEffect == null)
+                    tempChargeEffect = Instantiate(chargeEffect);
+
+                tempChargeEffect.transform.position = firePoint.position;
+
                 chargeTimer += Time.deltaTime;
 
                 if (chargeTimer > maxChargeTime)
@@ -69,6 +89,11 @@ public abstract class EnemyChargeSkill : EnemySkill
                 }
 
                 chargeDuration = chargeTimer;
+            }
+            else
+            {
+                Destroy(tempChargeEffect);
+                chargeTimer = 0;
             }
         }
 

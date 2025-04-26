@@ -24,7 +24,7 @@ public class EnemyBullet : MonoBehaviour
 
     protected virtual void OnTriggerEnter2D(Collider2D collider)
     {
-        Instantiate(hitEffect, transform.position, transform.rotation);
+        Instantiate(hitEffect, transform.position + transform.up * 0.5f, transform.rotation);
 
         State state = collider.gameObject.GetComponent<State>();
         EarthState earth = collider.gameObject.GetComponent<EarthState>();

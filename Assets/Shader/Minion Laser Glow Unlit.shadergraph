@@ -707,9 +707,9 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "r": 0.11764705926179886,
+        "r": 0.11764704436063767,
         "g": 0.7372549176216126,
-        "b": 0.45098039507865908,
+        "b": 0.31912466883659365,
         "a": 0.6509804129600525
     },
     "isMainColor": false,
@@ -1112,7 +1112,7 @@
         "r": 0.07317905873060227,
         "g": 4.118972301483154,
         "b": 0.07317905873060227,
-        "a": 0.0
+        "a": 0.6431372761726379
     },
     "isMainColor": false,
     "m_ColorMode": 1
@@ -1643,7 +1643,7 @@
     "hlslDeclarationOverride": 0,
     "m_Hidden": false,
     "m_Value": {
-        "m_SerializedTexture": "",
+        "m_SerializedTexture": "{\"texture\":{\"fileID\":10307,\"guid\":\"0000000000000000f000000000000000\",\"type\":0}}",
         "m_Guid": ""
     },
     "isMainTexture": false,

@@ -347,7 +347,8 @@ MonoBehaviour:
   baseDamage: 5
   cooldown: 4.5
   cooldownRandModifier: 0
-  laserFirePoint: {fileID: 1687777073741839171}
+  chargeEffect: {fileID: 2680227453436303885, guid: 0045d508863fc764ebdbe23ae3aefaf7, type: 3}
+  firePoint: {fileID: 1687777073741839171}
   laserHitLayers:
     serializedVersion: 2
     m_Bits: 768

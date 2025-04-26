@@ -233,7 +233,7 @@ LineRenderer:
       m_RotationOrder: 4
     colorGradient:
       serializedVersion: 2
-      key0: {r: 0.11764707, g: 0.7372549, b: 0.45098042, a: 1}
+      key0: {r: 1, g: 1, b: 1, a: 1}
       key1: {r: 1, g: 1, b: 1, a: 1}
       key2: {r: 0, g: 0, b: 0, a: 0}
       key3: {r: 0, g: 0, b: 0, a: 0}
@@ -287,7 +287,8 @@ MonoBehaviour:
   baseDamage: 5
   cooldown: 4.5
   cooldownRandModifier: 0
-  laserFirePoint: {fileID: 2605477533920118849}
+  chargeEffect: {fileID: 2680227453436303885, guid: d67a65ef83fe8494abe67d88e0853ee8, type: 3}
+  firePoint: {fileID: 2605477533920118849}
   laserHitLayers:
     serializedVersion: 2
     m_Bits: 3072

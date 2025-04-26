@@ -81,10 +81,22 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 2605477533920118849, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0.7
+      objectReference: {fileID: 0}
     - target: {fileID: 3501717510986240449, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
       propertyPath: m_Name
       value: Laser Minion
       objectReference: {fileID: 0}
+    - target: {fileID: 3921764814042438125, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
+      propertyPath: firePoint
+      value: 
+      objectReference: {fileID: 55316843946641905}
+    - target: {fileID: 3921764814042438125, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
+      propertyPath: chargeEffect
+      value: 
+      objectReference: {fileID: 2680227453436303885, guid: d67a65ef83fe8494abe67d88e0853ee8, type: 3}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -93,6 +105,11 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1025591966410276508}
   m_SourcePrefab: {fileID: 100100000, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
+--- !u!4 &55316843946641905 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 2605477533920118849, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
+  m_PrefabInstance: {fileID: 2660504105672819120}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1473974392953327729 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 3501717510986240449, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
