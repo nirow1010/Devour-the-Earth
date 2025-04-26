@@ -167,82 +167,98 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 995b7a75a881ea042ac416eedd564e5d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  readyToSpawn: 1
   totalPhase: 3
-  phaseEnemyOptions:
-  - easyEnemys:
-    - prefab: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
-      orbitHighBound: 20
-      orbitLowBound: 15
-      spawnAmountHighBound: 4
-      spawnAmountLowBound: 3
-    - prefab: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
-      orbitHighBound: 20
-      orbitLowBound: 15
-      spawnAmountHighBound: 10
-      spawnAmountLowBound: 5
-    mediumEnemys:
-    - prefab: {fileID: 730736319650993459, guid: 890894dcee4da3d4f876a7fef16ae23a, type: 3}
-      orbitHighBound: 20
-      orbitLowBound: 15
-      spawnAmountHighBound: 5
-      spawnAmountLowBound: 4
-    - prefab: {fileID: 730736319650993459, guid: 890894dcee4da3d4f876a7fef16ae23a, type: 3}
-      orbitHighBound: 20
-      orbitLowBound: 15
-      spawnAmountHighBound: 5
-      spawnAmountLowBound: 4
-    hardEnemys:
-    - prefab: {fileID: 730736319650993459, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
-      orbitHighBound: 20
-      orbitLowBound: 15
-      spawnAmountHighBound: 6
-      spawnAmountLowBound: 5
-  - easyEnemys:
-    - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
-      orbitHighBound: 30
-      orbitLowBound: 20
-      spawnAmountHighBound: 3
-      spawnAmountLowBound: 2
-    mediumEnemys:
-    - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
-      orbitHighBound: 30
-      orbitLowBound: 20
-      spawnAmountHighBound: 4
-      spawnAmountLowBound: 3
-    hardEnemys:
-    - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
-      orbitHighBound: 30
-      orbitLowBound: 20
-      spawnAmountHighBound: 5
-      spawnAmountLowBound: 4
-  - easyEnemys:
-    - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
-      orbitHighBound: 15
-      orbitLowBound: 10
-      spawnAmountHighBound: 3
-      spawnAmountLowBound: 2
-    mediumEnemys:
-    - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
-      orbitHighBound: 15
-      orbitLowBound: 10
-      spawnAmountHighBound: 4
-      spawnAmountLowBound: 3
-    hardEnemys:
-    - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
-      orbitHighBound: 15
-      orbitLowBound: 10
-      spawnAmountHighBound: 5
-      spawnAmountLowBound: 4
-  timeBetween:
-  - min: 4
-    max: 8
-  - min: 3
-    max: 7
-  - min: 5
-    max: 7
-  difficultyWeight: []
+  phaseSettings:
+  - enemyOptions:
+      easyEnemies:
+      - prefab: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+        orbitHighBound: 20
+        orbitLowBound: 15
+        spawnAmountHighBound: 4
+        spawnAmountLowBound: 3
+      - prefab: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+        orbitHighBound: 20
+        orbitLowBound: 15
+        spawnAmountHighBound: 10
+        spawnAmountLowBound: 5
+      mediumEnemies:
+      - prefab: {fileID: 730736319650993459, guid: 890894dcee4da3d4f876a7fef16ae23a, type: 3}
+        orbitHighBound: 20
+        orbitLowBound: 15
+        spawnAmountHighBound: 5
+        spawnAmountLowBound: 4
+      - prefab: {fileID: 730736319650993459, guid: 890894dcee4da3d4f876a7fef16ae23a, type: 3}
+        orbitHighBound: 20
+        orbitLowBound: 15
+        spawnAmountHighBound: 5
+        spawnAmountLowBound: 4
+      hardEnemies:
+      - prefab: {fileID: 730736319650993459, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
+        orbitHighBound: 18
+        orbitLowBound: 12
+        spawnAmountHighBound: 6
+        spawnAmountLowBound: 5
+    timeRange:
+      min: 4
+      max: 8
+    difficultyWeight:
+      easy: 8
+      medium: 5
+      hard: 3
+  - enemyOptions:
+      easyEnemies:
+      - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
+        orbitHighBound: 30
+        orbitLowBound: 20
+        spawnAmountHighBound: 3
+        spawnAmountLowBound: 2
+      mediumEnemies:
+      - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
+        orbitHighBound: 30
+        orbitLowBound: 20
+        spawnAmountHighBound: 4
+        spawnAmountLowBound: 3
+      hardEnemies:
+      - prefab: {fileID: 4078281686942072444, guid: f679cb02a25124ea0b1fb4a0931a4482, type: 3}
+        orbitHighBound: 15
+        orbitLowBound: 10
+        spawnAmountHighBound: 3
+        spawnAmountLowBound: 2
+    timeRange:
+      min: 3
+      max: 7
+    difficultyWeight:
+      easy: 5
+      medium: 8
+      hard: 3
+  - enemyOptions:
+      easyEnemies:
+      - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
+        orbitHighBound: 15
+        orbitLowBound: 10
+        spawnAmountHighBound: 3
+        spawnAmountLowBound: 2
+      mediumEnemies:
+      - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
+        orbitHighBound: 15
+        orbitLowBound: 10
+        spawnAmountHighBound: 4
+        spawnAmountLowBound: 3
+      hardEnemies:
+      - prefab: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
+        orbitHighBound: 15
+        orbitLowBound: 10
+        spawnAmountHighBound: 5
+        spawnAmountLowBound: 4
+    timeRange:
+      min: 5
+      max: 7
+    difficultyWeight:
+      easy: 3
+      medium: 8
+      hard: 7
   earthState: {fileID: 5299533153568340076}
-  readlyToSpawn: 1
 --- !u!114 &4510894561104571300
 MonoBehaviour:
   m_ObjectHideFlags: 0

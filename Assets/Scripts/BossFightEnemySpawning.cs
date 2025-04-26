@@ -1,11 +1,99 @@
 using System.Collections.Generic;
 using System.Collections;
 using UnityEngine;
+using System.Runtime.CompilerServices;
 
 public class BossFightEnemySpawning : MonoBehaviour
 {
+    // initial spawn setting
+    public bool readyToSpawn = true;
+    
+    // Phase Settings
+    public int totalPhase;
+    [SerializeField, SyncedArrayAttribute("totalPhase")] PhaseSetting[] phaseSettings;
+
+    // Stores Earth Information
+    [SerializeField] EarthState earthState;
+
+    // Stores private variables
+    private int phase;
+    private System.Random rand;
+
+    void Start()
+    {
+        earthState = GetComponent<EarthState>();
+        rand = new System.Random();
+        readyToSpawn = true;
+        phase = 0;
+    }
+
+    void Update()
+    {
+        float relativeEarthHealth = earthState.GetHealth() / earthState.startingHealth;
+        phase = (int) ((1f - relativeEarthHealth) * totalPhase);
+        if (readyToSpawn)
+            StartCoroutine(SpawnEnemy());
+    }
+
+    IEnumerator SpawnEnemy()
+    {
+        PhaseSetting phaseSetting = phaseSettings[phase];
+
+        PhaseSetting.EnemyOptions options = phaseSetting.GetEnemyOptions();
+        PhaseSetting.TimeRange timeRange = phaseSetting.GetTimeRange();
+        PhaseSetting.DifficultyWeight weight = phaseSetting.GetDifficultyWeight();
+
+        readyToSpawn = false;
+
+        int weightTotal = weight.easy + weight.medium + weight.hard;
+        int randDificulty = rand.Next(0, weightTotal);
+
+        List<Enemy> enemies;
+
+        if (randDificulty < weight.easy)
+        {
+            enemies = options.easyEnemies;
+        }
+        else if (randDificulty < weight.easy + weight.medium)
+        {
+            enemies = options.mediumEnemies;
+        }
+        else
+        {
+            enemies = options.hardEnemies;
+        }
+
+        Enemy randEnemy = enemies[rand.Next(0, enemies.Count)];
+
+        int randCount = rand.Next(randEnemy.spawnAmountLowBound,randEnemy.spawnAmountHighBound + 1);
+        int randOrbit = rand.Next(randEnemy.orbitLowBound, randEnemy.orbitHighBound + 1);
+
+        for (int i = 0; i < randCount; i++)
+        {
+            GameObject newEnemy = Instantiate(randEnemy.prefab);
+            newEnemy.transform.position = new Vector2(transform.position.x, transform.position.y - 1);
+            yield return null; // Wait one frame so Awake/Start can run
+
+            EnemyPathfinding enemyPathfinding = newEnemy.GetComponentInChildren<EnemyPathfinding>();
+            enemyPathfinding.earthOrbitRadius = randOrbit;
+            yield return new WaitForSeconds(waitTimeForEqualOrbit(randOrbit, randCount, enemyPathfinding.idleSpeed));
+        }
+
+        float randWait = rand.Next(timeRange.min, timeRange.max);
+        yield return new WaitForSeconds(randWait);
+        readyToSpawn = true;
+    }
+
+    public float waitTimeForEqualOrbit(int radius, int count, float speed)
+    {
+        float circumference = 2 * Mathf.PI * radius;
+        float distanceBetween = circumference / count;
+        float timeBetweenSpawns = distanceBetween / speed;
+        return timeBetweenSpawns;
+    }
+
     [System.Serializable]
-    public class Enemy
+    private class Enemy
     {
         public GameObject prefab;
 
@@ -17,110 +105,48 @@ public class BossFightEnemySpawning : MonoBehaviour
     }
 
     [System.Serializable]
-    public class EnemyLevels
+    private class PhaseSetting
     {
-        public List<Enemy> easyEnemys = new List<Enemy>();
-        public List<Enemy> mediumEnemys = new List<Enemy>();
-        public List<Enemy> hardEnemys = new List<Enemy>();
-    }
+        [SerializeField] EnemyOptions enemyOptions;
+        [SerializeField] TimeRange timeRange;
+        [SerializeField] DifficultyWeight difficultyWeight;
 
-    [System.Serializable]
-    public struct TimeRange
-    {
-        public int min;
-        public int max;
-    }
-    [System.Serializable]
-    public struct DifficultyWeight
-    {
-        public int easy;
-        public int medium;
-        public int hard;
-    }
-
-    public int totalPhase;
-    public List<EnemyLevels> phaseEnemyOptions;
-    public TimeRange[] timeBetween;
-    public DifficultyWeight[] difficultyWeight;
-
-    public EarthState earthState;
-
-    private int phase;
-    private System.Random rand;
-    public bool readlyToSpawn = true;
-
-    void Start()
-    {
-        earthState = GetComponent<EarthState>();
-        rand = new System.Random();
-        readlyToSpawn = true;
-        phase = 0;
-    }
-
-    void Update()
-    {
-        float relativeEarthHealth = (earthState.GetHealth() / earthState.startingHealth) * 100;
-
-        while (relativeEarthHealth <= 100f - 100f / totalPhase * (phase + 1))
+        public EnemyOptions GetEnemyOptions()
         {
-            phase++;
+            return enemyOptions;
         }
 
-        if (readlyToSpawn)
-            StartCoroutine(SpawnEnemy());
-    }
-
-    IEnumerator Wait(float seconds)
-    {
-        yield return new WaitForSeconds(seconds);
-    }
-
-    IEnumerator SpawnEnemy()
-    {
-        readlyToSpawn = false;
-        int wightTotal = difficultyWeight[phase].easy + difficultyWeight[phase].medium + difficultyWeight[phase].hard;
-        int randDificulty = rand.Next(0, wightTotal);
-        List<Enemy> enemies;
-
-        if (randDificulty < difficultyWeight[phase].easy)
+        public TimeRange GetTimeRange()
         {
-            enemies = phaseEnemyOptions[phase].easyEnemys;
-        }
-        else if (randDificulty < difficultyWeight[phase].easy + difficultyWeight[phase].medium)
-        {
-            enemies = phaseEnemyOptions[phase].mediumEnemys;
-        }
-        else
-        {
-            enemies = phaseEnemyOptions[phase].hardEnemys;
+            return timeRange;
         }
 
-        Enemy randEnemy = enemies[rand.Next(0, enemies.Count)];
-        int randCount = rand.Next(randEnemy.spawnAmountLowBound,randEnemy.spawnAmountHighBound+1);
-        int randOrbit = rand.Next(randEnemy.orbitLowBound, randEnemy.orbitHighBound+1);
-
-        for (int i = 0; i < randCount; i++)
+        public DifficultyWeight GetDifficultyWeight()
         {
-            GameObject newEnemy = Instantiate(randEnemy.prefab);
-            newEnemy.transform.position = new Vector2(this.transform.position.x, this.transform.position.y - 1);
-            yield return null; // Wait one frame so Awake/Start can run
-
-            EnemyPathfinding enemyPathfinding = newEnemy.GetComponentInChildren<EnemyPathfinding>();
-            enemyPathfinding.earthOrbitRadius = randOrbit;
-            yield return new WaitForSeconds(waitTimeForEqualOrbit(randOrbit, randCount, enemyPathfinding.idleSpeed));
+            return difficultyWeight;
         }
 
-        float randWait = rand.Next(timeBetween[phase].min, timeBetween[phase].max);
-        StartCoroutine(Wait(randWait));
-        readlyToSpawn = true;
-    }
+        [System.Serializable]
+        public class EnemyOptions
+        {
+            public List<Enemy> easyEnemies = new List<Enemy>();
+            public List<Enemy> mediumEnemies = new List<Enemy>();
+            public List<Enemy> hardEnemies = new List<Enemy>();
+        }
 
-    public float waitTimeForEqualOrbit(int radius, int count, float speed)
-    {
-        float circumference = 2 * Mathf.PI * radius;
-        float distanceBetween = circumference / count;
-        float timeBetweenSpawns = distanceBetween / speed;
-        return timeBetweenSpawns;
-    }
+        [System.Serializable]
+        public struct TimeRange
+        {
+            public int min;
+            public int max;
+        }
 
+        [System.Serializable]
+        public struct DifficultyWeight
+        {
+            public int easy;
+            public int medium;
+            public int hard;
+        }
+    }
 }

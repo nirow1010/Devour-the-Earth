@@ -80,8 +80,13 @@ public abstract class EnemyChargeSkill : EnemySkill
                 if (tempChargeEffect == null)
                 {
                     tempChargeEffect = Instantiate(chargeEffect);
+
                     SelfDestructiveFollowingEffect effect = tempChargeEffect.GetComponent<SelfDestructiveFollowingEffect>();
-                    if (effect != null) effect.SetFollow(firePoint);
+
+                    if (effect != null)
+                    {
+                        effect.SetFollow(firePoint);
+                    }
                 }
 
                 chargeTimer += Time.deltaTime;
