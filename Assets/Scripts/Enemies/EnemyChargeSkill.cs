@@ -10,6 +10,7 @@ public abstract class EnemyChargeSkill : EnemySkill
     private float chargeTimer;
     private float chargeDuration;
     private float lastShootTime;
+
     private GameObject tempChargeEffect;
 
     protected void Initializer(float baseDamage, float cooldown, float minChargeTime, float maxChargeTime)
@@ -77,9 +78,11 @@ public abstract class EnemyChargeSkill : EnemySkill
             else if (IsSkillChargeTriggered())
             {
                 if (tempChargeEffect == null)
+                {
                     tempChargeEffect = Instantiate(chargeEffect);
-
-                tempChargeEffect.transform.position = firePoint.position;
+                    SelfDestructiveFollowingEffect effect = tempChargeEffect.GetComponent<SelfDestructiveFollowingEffect>();
+                    if (effect != null) effect.SetFollow(firePoint);
+                }
 
                 chargeTimer += Time.deltaTime;
 
