@@ -1140,7 +1140,7 @@ Transform:
   m_GameObject: {fileID: 960544736}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.165564, y: 10, z: -10}
+  m_LocalPosition: {x: -12.205843, y: 10, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3474,38 +3474,6 @@ PrefabInstance:
     - target: {fileID: 6209495299523169683, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[0].timeRange.max
-      value: 12
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[0].timeRange.min
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[1].timeRange.max
-      value: 10
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[1].timeRange.min
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[2].timeRange.max
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[2].timeRange.min
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[3].timeRange.max
-      value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
-      propertyPath: phaseSettings.Array.data[3].timeRange.min
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
