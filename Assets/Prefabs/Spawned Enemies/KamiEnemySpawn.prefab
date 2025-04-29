@@ -115,6 +115,14 @@ PrefabInstance:
       propertyPath: minionType
       value: 
       objectReference: {fileID: 5082064056509682292, guid: 06c992a6b2ca04aee874c7a05e131d19, type: 3}
+    - target: {fileID: 1174237487863420829, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1450485057652798984, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
+      propertyPath: startingHealth
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 3218638885459967150, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: m_Name
       value: Kamikaze Enemy

@@ -119,6 +119,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 2794177869043710969}
     m_Modifications:
+    - target: {fileID: 129375555140523136, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
+      propertyPath: baseDamage
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 129375555140523136, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
+      propertyPath: bulletSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1836650149229743833, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
+      propertyPath: startingHealth
+      value: 10
+      objectReference: {fileID: 0}
     - target: {fileID: 6534208846662201636, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
       propertyPath: m_Name
       value: Electric Minion

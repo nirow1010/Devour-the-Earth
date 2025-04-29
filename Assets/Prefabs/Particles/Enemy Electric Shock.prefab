@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4656084013473663346}
   - component: {fileID: 4107498154095199650}
   - component: {fileID: 3100682718547965962}
+  - component: {fileID: -6141626721311052833}
   m_Layer: 0
   m_Name: Enemy Electric Shock
   m_TagString: Untagged
@@ -117,3 +118,15 @@ VFXRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &-6141626721311052833
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 58346149646801945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b1127377eccef043bf449de42b72dd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

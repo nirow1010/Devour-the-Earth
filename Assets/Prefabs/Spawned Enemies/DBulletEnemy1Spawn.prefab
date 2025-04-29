@@ -49,6 +49,10 @@ PrefabInstance:
       propertyPath: minionType
       value: 
       objectReference: {fileID: 6584140851060744283, guid: 40903713bfb374a268fe058a630ff895, type: 3}
+    - target: {fileID: 1450485057652798984, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
+      propertyPath: startingHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3218638885459967150, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
       propertyPath: m_Name
       value: D Bullet Enemy 1
@@ -92,6 +96,10 @@ PrefabInstance:
     - target: {fileID: 4548242278678892098, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6534857366728246793, guid: ecd899d4a36b2044daf13a300f29c09f, type: 3}
+      propertyPath: m_BodyType
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

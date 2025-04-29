@@ -45,6 +45,10 @@ PrefabInstance:
       propertyPath: minionType
       value: 
       objectReference: {fileID: 4163834173411195793, guid: 5a62d5f8410ac4abaa27d1c0a9604ac7, type: 3}
+    - target: {fileID: 1450485057652798984, guid: c6940ea1b20d13e4c8f9a31ca74476f8, type: 3}
+      propertyPath: startingHealth
+      value: 7
+      objectReference: {fileID: 0}
     - target: {fileID: 3218638885459967150, guid: c6940ea1b20d13e4c8f9a31ca74476f8, type: 3}
       propertyPath: m_Name
       value: D Bullet Enemy 2
@@ -89,8 +93,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6534857366728246793, guid: c6940ea1b20d13e4c8f9a31ca74476f8, type: 3}
+      propertyPath: m_BodyType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8262507913825281127, guid: c6940ea1b20d13e4c8f9a31ca74476f8, type: 3}
       propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262507913825281127, guid: c6940ea1b20d13e4c8f9a31ca74476f8, type: 3}
+      propertyPath: baseDamage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

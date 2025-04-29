@@ -113,8 +113,16 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 6534857366728246793, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 8262507913825281127, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
       propertyPath: cooldown
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8262507913825281127, guid: 0a57e123ff0f3514b989700c743efe7f, type: 3}
+      propertyPath: baseDamage
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

@@ -159,6 +159,10 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3341782926386231361, guid: b7c44fe76fc50d44ea8974747f18275c, type: 3}
+      propertyPath: startingHealth
+      value: 5
+      objectReference: {fileID: 0}
     - target: {fileID: 3501717510986240449, guid: b7c44fe76fc50d44ea8974747f18275c, type: 3}
       propertyPath: m_Name
       value: D Bullet Minion 2
