@@ -34,6 +34,9 @@ public class KamikazeSkill : EnemyInstantSkill
         {
             Vector2 moveDir = transform.up;
             Vector2 moveForce = (moveDir * maxLaunchSpeed - rb.linearVelocity) * accelRate;
+
+            Debug.Log(moveForce);
+
             rb.AddForce(moveForce, ForceMode2D.Force);
 
             if (kamikazeTarget != null)

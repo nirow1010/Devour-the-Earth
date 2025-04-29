@@ -111,6 +111,10 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 109317492305671538}
     m_Modifications:
+    - target: {fileID: 2903790708391492245, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: startingHealth
+      value: 12
+      objectReference: {fileID: 0}
     - target: {fileID: 4518505873305940107, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
       propertyPath: m_LocalScale.x
       value: 2
@@ -162,6 +166,14 @@ PrefabInstance:
     - target: {fileID: 5532824009373988589, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
       propertyPath: m_Name
       value: Electric Enemy
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623882224677015450, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: bulletSpeed
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083227485895693031, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: m_BodyType
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
