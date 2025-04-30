@@ -4,21 +4,12 @@ public class RelativeShooter : MonoBehaviour
 {
     [SerializeField] AssimilationBullet bulletPrefab;
     
-
-    [SerializeField] private AudioClip collisionAudio;
-    private AudioSource audioSource;
-
     public float delayTime = 0.1f;
     public float bulletSpeed = 5;
     public float bulletSummonOffset = 1.5f;
 
     private bool canShoot = true;
     private float lastShootTime = 0;
-
-    void Start() 
-    {
-        audioSource = GetComponent<AudioSource>();
-    }
 
     // Update is called once per frame
     void Update()
@@ -30,13 +21,6 @@ public class RelativeShooter : MonoBehaviour
 
         if (canShoot && Input.GetMouseButton(0))
         {
-            // bullet shoot sound
-            if (collisionAudio != null)
-            {
-                audioSource.clip = collisionAudio;
-                audioSource.Play();
-            }
-
             Vector3 bulletPos = transform.position + transform.up * bulletSummonOffset;
             Quaternion bulletRot = transform.rotation;
 

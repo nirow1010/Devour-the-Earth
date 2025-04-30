@@ -31,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
+  m_LocalScale: {x: 7, y: 7, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -60,10 +60,10 @@ VisualEffect:
       m_Array: []
     m_Vector4f:
       m_Array:
-      - m_Value: {x: 0, y: 0.5601921, z: 1, w: 0}
+      - m_Value: {x: 0, y: 0.43757367, z: 1, w: 0}
         m_Name: FlashColor
         m_Overridden: 1
-      - m_Value: {x: 0.030430064, y: 0, z: 5.992157, w: 0}
+      - m_Value: {x: 390.74124, y: 636.5336, z: 2259.197, w: 0}
         m_Name: Color
         m_Overridden: 1
       - m_Value: {x: 0.19625267, y: 3.5338826, z: 3.7484272, w: 0}

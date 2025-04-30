@@ -7,7 +7,7 @@ public class BossFightEnemySpawning : MonoBehaviour
 {
     // initial spawn setting
     public bool readyToSpawn = true;
-    
+
     // Phase Settings
     public int totalPhase;
     [SerializeField, SyncedArrayAttribute("totalPhase")] PhaseSetting[] phaseSettings;
@@ -32,9 +32,13 @@ public class BossFightEnemySpawning : MonoBehaviour
     void Update()
     {
         float relativeEarthHealth = earthState.GetHealth() / earthState.startingHealth;
-        phase = (int) ((1f - relativeEarthHealth) * totalPhase);
+        phase = (int)((1f - relativeEarthHealth) * totalPhase);
         if (readyToSpawn && maximumEnemiesAllowed > GlobalStats.enemiesOnSkreen)
+        {
             StartCoroutine(SpawnEnemy());
+            StartCoroutine(waitBetweenSpawn());
+            readyToSpawn = false;
+        }
     }
 
     IEnumerator SpawnEnemy()
@@ -42,7 +46,6 @@ public class BossFightEnemySpawning : MonoBehaviour
         PhaseSetting phaseSetting = phaseSettings[phase];
 
         PhaseSetting.EnemyOptions options = phaseSetting.GetEnemyOptions();
-        PhaseSetting.TimeRange timeRange = phaseSetting.GetTimeRange();
         PhaseSetting.DifficultyWeight weight = phaseSetting.GetDifficultyWeight();
 
         readyToSpawn = false;
@@ -67,7 +70,7 @@ public class BossFightEnemySpawning : MonoBehaviour
 
         Enemy randEnemy = enemies[rand.Next(0, enemies.Count)];
 
-        int randCount = rand.Next(randEnemy.spawnAmountLowBound,randEnemy.spawnAmountHighBound + 1);
+        int randCount = rand.Next(randEnemy.spawnAmountLowBound, randEnemy.spawnAmountHighBound + 1);
         int randOrbit = rand.Next(randEnemy.orbitLowBound, randEnemy.orbitHighBound + 1);
 
         for (int i = 0; i < randCount; i++)
@@ -81,6 +84,12 @@ public class BossFightEnemySpawning : MonoBehaviour
             enemyPathfinding.earthOrbitRadius = randOrbit;
             yield return new WaitForSeconds(waitTimeForEqualOrbit(randOrbit, randCount, enemyPathfinding.idleSpeed));
         }
+    }
+
+    IEnumerator waitBetweenSpawn()
+    {
+        PhaseSetting phaseSetting = phaseSettings[phase];
+        PhaseSetting.TimeRange timeRange = phaseSetting.GetTimeRange();
 
         float randWait = Random.Range(timeRange.min, timeRange.max);
         yield return new WaitForSeconds(randWait);
