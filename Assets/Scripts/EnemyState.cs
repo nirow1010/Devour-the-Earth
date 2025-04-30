@@ -56,7 +56,7 @@ public class EnemyState : State, Stunnable
         if (!IsAlive())
         {
             if(Random.Range(0f,100f) < chanceToDrop)
-                SpawnPickUp();
+            spawnPickUp();
 
             GlobalStats.enemiesOnSkreen--;
 
@@ -84,8 +84,7 @@ public class EnemyState : State, Stunnable
 
         isStunned = false;
     }
-
-    public void SpawnPickUp()
+    public void spawnPickUp()
     {
         GameObject newPickUp = Instantiate(pickUp, transform.position, Quaternion.identity);
         newPickUp.GetComponent<Rigidbody2D>().linearVelocity = rb.linearVelocity / 1.5f;

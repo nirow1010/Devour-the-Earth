@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64d2f82113064b44b4eeade5c0deaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 2
+  baseDamage: 5
   cooldown: 5
   cooldownRandModifier: 0.1
   bulletFirePoint: {fileID: 7655007940741654009}

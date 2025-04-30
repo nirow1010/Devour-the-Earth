@@ -163,10 +163,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: KamikazeMinion
       objectReference: {fileID: 0}
-    - target: {fileID: 8431230108762927604, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
-      propertyPath: startingHealth
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8800813724875066698, guid: 2ae78dfc688a80c41bd782e7c459275c, type: 3}
       propertyPath: maxLaunchSpeed
       value: 24

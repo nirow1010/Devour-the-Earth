@@ -136,7 +136,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd5020466ae9f554bbdf9bf1800cfa4f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 7
+  startingHealth: 5
   hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
   minionType: {fileID: 624422218974023433, guid: 7f6c557023c7f471ab8ecf632f63a76c, type: 3}
   pickUp: {fileID: 6377457681966170572, guid: 50462eb47cbb3b14aa4b005f23821d72, type: 3}
@@ -185,14 +185,14 @@ Rigidbody2D:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3218638885459967150}
-  m_BodyType: 0
+  m_BodyType: 1
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
   m_AngularDamping: 0.05
-  m_GravityScale: 0
+  m_GravityScale: 1
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd4d64ca660a74d40ac96d47b7b23ce5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1
+  baseDamage: 0.5
   cooldown: 1.5
   cooldownRandModifier: 0.5
   bulletFirePoint: {fileID: 72480990400689009}

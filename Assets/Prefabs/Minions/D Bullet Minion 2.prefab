@@ -206,7 +206,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a64d2f82113064b44b4eeade5c0deaa0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  baseDamage: 1
+  baseDamage: 0.5
   cooldown: 1.5
   cooldownRandModifier: 0.5
   bulletFirePoint: {fileID: 3938147062789534068}
@@ -224,7 +224,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 081b91d688659174d918b367e13ac685, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  startingHealth: 7
+  startingHealth: 5
   hitColor: {r: 1, g: 0, b: 0, a: 0.5137255}
   shipData:
     shipType: {fileID: 0}

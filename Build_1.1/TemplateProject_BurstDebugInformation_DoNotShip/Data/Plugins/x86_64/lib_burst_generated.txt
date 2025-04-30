@@ -1,4 +1,4 @@
-Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+Library: C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --platform=Windows
 --backend=burst-llvm-18
 --target=X64_SSE2
@@ -9,10 +9,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -125,10 +125,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Burst.BurstCompiler+BurstCompilerHelper, Unity.Burst, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::IsBurstEnabled()--8c2be93e18276203cbd918daa2748a10
@@ -241,10 +241,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=UnityEngine.Rendering.Universal.ShadowUtility, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::GetVertexReferenceStats(Unity.Collections.NativeArray`1[[UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Collections.NativeArray`1[[UnityEngine.Rendering.Universal.ShadowEdge, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.Boolean&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.Int32&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Collections.NativeArray`1[[UnityEngine.Rendering.Universal.ShadowUtility+RemappingInfo, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--988a40d3aa93620eb189303886118f02
@@ -268,10 +268,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --target-framework=NetFramework
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=UnityEngine.Rendering.Universal.ShadowUtility, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::GetVertexReferenceStats(Unity.Collections.NativeArray`1[[UnityEngine.Vector3, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|Unity.Collections.NativeArray`1[[UnityEngine.Rendering.Universal.ShadowEdge, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.Boolean&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.Int32&, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Collections.NativeArray`1[[UnityEngine.Rendering.Universal.ShadowUtility+RemappingInfo, Unity.RenderPipelines.Universal.2D.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]]&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null)--988a40d3aa93620eb189303886118f02
@@ -297,10 +297,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --float-mode=Fast
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a
@@ -317,10 +317,10 @@ Library: C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Pl
 --float-mode=Fast
 --linker-options=PdbAltPath="TemplateProject_Data/Plugins/x86_64/lib_burst_generated.pdb"
 --generate-link-xml=Temp\burst.link.xml
---temp-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\Burst
+--temp-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\Burst
 --key-folder=C:/Program Files/Unity/Hub/Editor/6000.0.44f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport
---decode-folder=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Library\Burst
---output=C:\Users\jmflo\G\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
+--decode-folder=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Library\Burst
+--output=C:\Users\jmflo\OneDrive\Documents\GitHub\SPRING2025ECSE290Team9\Temp\BurstOutput\Data\Plugins\x86_64\lib_burst_generated
 --pdb-search-paths=Temp/ManagedSymbols/
 
 --method=Unity.Jobs.IJobForExtensions+ForJobStruct`1[[UnityEngine.Rendering.Universal.ZBinningJob, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null]], UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null::Execute(UnityEngine.Rendering.Universal.ZBinningJob&, Unity.RenderPipelines.Universal.Runtime, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|System.IntPtr, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089|Unity.Jobs.LowLevel.Unsafe.JobRanges&, UnityEngine.CoreModule, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null|System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089)--77fc393cb521ac129b1392d4eb94d29a

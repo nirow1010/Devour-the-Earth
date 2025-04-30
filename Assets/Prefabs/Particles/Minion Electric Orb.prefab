@@ -14,7 +14,6 @@ GameObject:
   - component: {fileID: 3798281340846302105}
   - component: {fileID: 6213568040581308819}
   - component: {fileID: -3005971630595788419}
-  - component: {fileID: 7631716275098380486}
   m_Layer: 6
   m_Name: Minion Electric Orb
   m_TagString: Untagged
@@ -32,7 +31,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 7, y: 7, z: 1}
+  m_LocalScale: {x: 3.5, y: 3.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -204,15 +203,3 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   hitEffect: {fileID: 58346149646801945, guid: abeed82c2dde0f3439eb279ae1ee2e6e, type: 3}
   stunTime: 2
---- !u!114 &7631716275098380486
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 9086857958600331649}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2b1127377eccef043bf449de42b72dd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 

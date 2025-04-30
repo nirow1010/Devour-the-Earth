@@ -97,10 +97,6 @@ PrefabInstance:
       propertyPath: chargeEffect
       value: 
       objectReference: {fileID: 2680227453436303885, guid: d67a65ef83fe8494abe67d88e0853ee8, type: 3}
-    - target: {fileID: 3965521106213489582, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}
-      propertyPath: startingHealth
-      value: 15
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -133,12 +129,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   startingHealth: 5
   hitColor: {r: 0, g: 0, b: 0, a: 0}
-  shipData:
-    shipType: {fileID: 0}
-    hubLocation: {x: 0, y: 0}
-    gameLocation: {x: 0, y: 0}
-    minionAngle: {x: 0, y: 0, z: 0, w: 0}
-    stickerSprite: {fileID: 0}
 --- !u!4 &2600652298225668846 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 70752610538459998, guid: 50cf7d98f90c115488a2165aa98436ca, type: 3}

@@ -154,7 +154,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e29cd920b93dcfe4da58709539b1b85a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  desplayRadius: 10
+  desplayRadius: 22.04
 --- !u!114 &7190358900932469544
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -210,8 +210,8 @@ MonoBehaviour:
         spawnAmountHighBound: 5
         spawnAmountLowBound: 3
     timeRange:
-      min: 7
-      max: 12
+      min: 3
+      max: 5
     difficultyWeight:
       easy: 10
       medium: 5
@@ -261,8 +261,8 @@ MonoBehaviour:
         spawnAmountHighBound: 3
         spawnAmountLowBound: 2
     timeRange:
-      min: 6
-      max: 10
+      min: 1
+      max: 3
     difficultyWeight:
       easy: 12
       medium: 8
@@ -317,8 +317,8 @@ MonoBehaviour:
         spawnAmountHighBound: 2
         spawnAmountLowBound: 1
     timeRange:
-      min: 4
-      max: 8
+      min: 0.5
+      max: 2
     difficultyWeight:
       easy: 15
       medium: 14
@@ -373,8 +373,8 @@ MonoBehaviour:
         spawnAmountHighBound: 5
         spawnAmountLowBound: 3
     timeRange:
-      min: 3
-      max: 6
+      min: 0.5
+      max: 1
     difficultyWeight:
       easy: 13
       medium: 12

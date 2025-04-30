@@ -7,7 +7,6 @@ public class EarthSpriteScript : MonoBehaviour
     private EarthState earthState;
     private float relitiveHealth;
     private int phaseCount = 0;
-
     void Start()
     {
         earth = this.gameObject.GetComponent<SpriteRenderer>();
@@ -18,17 +17,16 @@ public class EarthSpriteScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        relitiveHealth = (earthState.GetHealth() / earthState.startingHealth);
-        int phase = (int)((1f - relitiveHealth) * (earthPhases.Length - 1));
-
-        if (phase > phaseCount)
+        relitiveHealth = (earthState.GetHealth() / earthState.startingHealth) * 100;
+        float nextPhaseHealth = (earthState.startingHealth / earthPhases.Length) * (earthPhases.Length - phaseCount);
+        if (relitiveHealth <= nextPhaseHealth && relitiveHealth > 0)
         {
-            earth.sprite = earthPhases[phase];
+            earth.sprite = earthPhases[phaseCount];
 
-            if (phase < earthPhases.Length - 1)
-                CamShake.Instance.shake(15f, 1.5f);
+            if(phaseCount > 0)
+            CamShake.Instance.shake(15f,1.5f);
 
-            phaseCount = phase;
+            phaseCount++;
         }
     }
 }
