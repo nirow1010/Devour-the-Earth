@@ -171,9 +171,17 @@ PrefabInstance:
       propertyPath: bulletSpeed
       value: 9
       objectReference: {fileID: 0}
+    - target: {fileID: 8185131762923795578, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: shootAtLayer.m_Bits
+      value: 768
+      objectReference: {fileID: 0}
     - target: {fileID: 9083227485895693031, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
       propertyPath: m_BodyType
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9083227485895693031, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: m_Constraints
+      value: 4
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

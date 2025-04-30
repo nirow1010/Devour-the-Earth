@@ -231,6 +231,7 @@ public class EnemyPathfinding : MonoBehaviour
         if (faceWhenHit)
             faceingDoToHit = true;
     }
+
     public bool getFaceingDoToHit()
     {
         return faceingDoToHit;
