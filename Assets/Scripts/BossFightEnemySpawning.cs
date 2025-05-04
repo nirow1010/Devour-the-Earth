@@ -16,6 +16,7 @@ public class BossFightEnemySpawning : MonoBehaviour
     [SerializeField] EarthState earthState;
 
     // Stores private variables
+    private int prevPhase;
     private int phase;
     private System.Random rand;
 
@@ -26,6 +27,7 @@ public class BossFightEnemySpawning : MonoBehaviour
         earthState = GetComponent<EarthState>();
         rand = new System.Random();
         readyToSpawn = true;
+        prevPhase = 0;
         phase = 0;
     }
 
@@ -33,6 +35,15 @@ public class BossFightEnemySpawning : MonoBehaviour
     {
         float relativeEarthHealth = earthState.GetHealth() / earthState.startingHealth;
         phase = (int)((1f - relativeEarthHealth) * totalPhase);
+
+        if (prevPhase < phase)
+        {
+            StopCoroutine(SpawnEnemy());
+            StopCoroutine(waitBetweenSpawn());
+            readyToSpawn = true;
+            prevPhase = phase;
+        }
+
         if (readyToSpawn && maximumEnemiesAllowed > GlobalStats.enemiesOnSkreen)
         {
             StartCoroutine(SpawnEnemy());

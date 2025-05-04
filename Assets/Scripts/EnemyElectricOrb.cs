@@ -10,15 +10,7 @@ public class EnemyElectricOrb : Projectile
     {
         State state = collider.GetComponent<State>();
 
-        if (state == null)
-        {
-            Destroy(gameObject);
-        }
-        else if (state is EarthState)
-        {
-            Destroy(gameObject, 2);
-        }
-        else 
+        if (state != null && state is not EarthState) 
         {
             if (hitEffect != null)
             {
