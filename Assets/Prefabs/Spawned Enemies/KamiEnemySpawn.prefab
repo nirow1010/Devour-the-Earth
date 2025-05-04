@@ -169,7 +169,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7251759994328462456, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: viewRange
-      value: 10
+      value: 17
       objectReference: {fileID: 0}
     - target: {fileID: 7251759994328462456, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: closeRange
@@ -177,7 +177,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7251759994328462456, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: attackRange
-      value: 10
+      value: 16
       objectReference: {fileID: 0}
     - target: {fileID: 7295031648975009161, guid: 9955a36ab58458b4db6d23e3f756ef87, type: 3}
       propertyPath: autoDestructionTime

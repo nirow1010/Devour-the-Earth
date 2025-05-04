@@ -168,6 +168,10 @@ PrefabInstance:
       value: D Bullet Minion 2
       objectReference: {fileID: 0}
     - target: {fileID: 8829695041819542925, guid: b7c44fe76fc50d44ea8974747f18275c, type: 3}
+      propertyPath: baseDamage
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 8829695041819542925, guid: b7c44fe76fc50d44ea8974747f18275c, type: 3}
       propertyPath: launchAudio
       value: 
       objectReference: {fileID: 8300000, guid: 0a4ce91b59d14434d8116b55dd19c743, type: 3}
@@ -213,7 +217,7 @@ AudioSource:
   m_audioClip: {fileID: 0}
   m_Resource: {fileID: 0}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: 0.3
   m_Pitch: 1
   Loop: 0
   Mute: 0
