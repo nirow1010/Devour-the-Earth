@@ -3338,11 +3338,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[3].timeRange.max
-      value: 13
+      value: 11.5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[3].timeRange.min
-      value: 9
+      value: 7.5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].difficultyWeight.hard
@@ -3423,7 +3423,7 @@ PrefabInstance:
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.hardEnemies.Array.data[2].prefab
       value: 
-      objectReference: {fileID: 530195350152991745, guid: ca91cc4d757c44bf79dea38f627ed363, type: 3}
+      objectReference: {fileID: 8797427769457703808, guid: af349ee12335347b6be4fa89ae70bd6c, type: 3}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[3].enemyOptions.easyEnemies.Array.data[0].prefab
       value: 
