@@ -25,4 +25,13 @@ public class ShipPickUp : MonoBehaviour
             Destroy(this.gameObject);
         }
     }
+
+    public void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.CompareTag("minion"))
+        {
+            pickUp();
+            Destroy(this.gameObject);
+        }
+    }
 }

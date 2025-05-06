@@ -14,7 +14,7 @@ public class SceneSetUp : MonoBehaviour
             GameObject homeNode = new GameObject();
             homeNode.transform.SetParent(player.transform);
             
-            GameObject minion = Instantiate(shipData.shipType);
+            GameObject minion = Instantiate(shipData.shipType, player.transform.position, player.transform.rotation);
             minion.transform.localScale = new Vector2(2, 2);
             minion.transform.position = player.transform.position;
             minion.GetComponentInChildren<BasicPathfinding>().SetGoal(homeNode);
@@ -22,7 +22,7 @@ public class SceneSetUp : MonoBehaviour
 
             minion.transform.localPosition = shipData.gameLocation;
             homeNode.transform.localPosition = shipData.gameLocation;
-            minion.transform.localRotation = shipData.minionAngle;
+            //minion.transform.localRotation = shipData.minionAngle;
         }
     }
 

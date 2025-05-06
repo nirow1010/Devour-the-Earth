@@ -4,16 +4,21 @@ public class BasicPathfinding : MonoBehaviour
 {
     private GameObject goal;
     private GameObject earth;
+    private GameObject player;
 
     public float speed;
+    public bool faceForward;
 
     public string target;
     public float rotateSpeed;
     private float spaceBetween;
+    private MinionState minionState;
 
     void Start()
     {
+        player = GameObject.FindWithTag("Player");
         earth = GameObject.FindWithTag("Earth");
+        minionState = this.GetComponent<MinionState>();
     }
 
     // Update is called once per frame
@@ -25,13 +30,32 @@ public class BasicPathfinding : MonoBehaviour
             transform.Translate(direction * Time.deltaTime * speed, Space.World);
         }
 
-        GameObject target = FindClosestTarget();
 
-        if (target != null)
+        if (faceForward)
         {
-            Vector2 angleDirection = target.transform.position - transform.position;
-            float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg - 90f;
-            transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), rotateSpeed * Time.deltaTime);
+            if (player != null)
+            {
+                Quaternion finalRotation;
+                if (IsZeroQuaternion(minionState.shipData.minionAngle))
+                { 
+                    finalRotation = player.transform.rotation;
+                }
+                else
+                {
+                    finalRotation = player.transform.rotation * minionState.shipData.minionAngle;
+                }
+                transform.rotation = Quaternion.Lerp(transform.rotation, finalRotation, rotateSpeed * Time.deltaTime);
+            }
+        }
+        else 
+        {
+            GameObject target = FindClosestTarget();
+            if (target != null)
+            {
+                Vector2 angleDirection = target.transform.position - transform.position;
+                float targetAngle = Mathf.Atan2(angleDirection.y, angleDirection.x) * Mathf.Rad2Deg - 90f;
+                transform.rotation = Quaternion.Lerp(transform.rotation, Quaternion.Euler(0, 0, targetAngle), rotateSpeed * Time.deltaTime);
+            }
         }
     }
 
@@ -60,7 +84,10 @@ public class BasicPathfinding : MonoBehaviour
 
         return closest;
     }
-
+    bool IsZeroQuaternion(Quaternion q)
+    {
+        return q.x == 0f && q.y == 0f && q.z == 0f && q.w == 0f;
+    }
     public void SetGoal(GameObject goal)
     {
         this.goal = goal;

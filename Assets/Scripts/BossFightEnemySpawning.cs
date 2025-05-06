@@ -66,11 +66,11 @@ public class BossFightEnemySpawning : MonoBehaviour
 
         List<Enemy> enemies;
 
-        if (randDificulty < weight.easy)
+        if (randDificulty <= weight.easy)
         {
             enemies = options.easyEnemies;
         }
-        else if (randDificulty < weight.easy + weight.medium)
+        else if (randDificulty <= weight.easy + weight.medium)
         {
             enemies = options.mediumEnemies;
         }
