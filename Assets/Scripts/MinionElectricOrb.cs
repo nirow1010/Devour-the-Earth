@@ -9,10 +9,18 @@ public class MinionElectricOrb : Projectile
     {
         State state = collider.GetComponent<State>();
 
-        if (state != null)
+        if (state == null)
         {
-            if (state is not EarthState && hitEffect != null)
+            Destroy(gameObject, 0.1f);
+        }
+        else
+        {
+            state.TakeDamage(GetDamage());
+
+            if (state is Stunnable && hitEffect != null)
             {
+                ((Stunnable)state).GetStunned(stunTime);
+
                 if (tempHitEffect == null)
                     Destroy(tempHitEffect);
 
@@ -24,12 +32,9 @@ public class MinionElectricOrb : Projectile
 
                 Destroy(tempHitEffect, stunTime);
             }
-
-            state.TakeDamage(GetDamage());
-
-            if (state is Stunnable)
+            else
             {
-                ((Stunnable) state).GetStunned(stunTime);
+                Destroy(gameObject, 0.1f);
             }
         }
     }

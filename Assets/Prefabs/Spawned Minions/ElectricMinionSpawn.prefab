@@ -121,7 +121,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 129375555140523136, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
       propertyPath: baseDamage
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 129375555140523136, guid: 6172ff2d21e56e34dab2ddcf9087a2a1, type: 3}
       propertyPath: bulletSpeed

@@ -1237,6 +1237,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DBulletEnemy1Spawn (3)
       objectReference: {fileID: 0}
+    - target: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2163112175207494268, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
       propertyPath: startingHealth
       value: 4
@@ -1710,6 +1714,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DBulletEnemy1Spawn (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2163112175207494268, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
       propertyPath: startingHealth
       value: 3
@@ -1978,6 +1986,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: DBulletEnemy1Spawn (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2163112175207494268, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
       propertyPath: startingHealth
       value: 3
@@ -2205,6 +2217,10 @@ PrefabInstance:
     - target: {fileID: 730736319650993459, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
       propertyPath: m_Name
       value: BasicEnemySpawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 730736319650993459, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 791615718978401530, guid: 9b724821663f04e31bb9def86082b38b, type: 3}
       propertyPath: earthOrbitRadius
@@ -3272,6 +3288,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Earth
       objectReference: {fileID: 0}
+    - target: {fileID: 2484900053570719145, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6209495299523169683, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: m_LocalPosition.x
       value: 20
@@ -3313,6 +3333,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[0].timeRange.max
       value: 12
       objectReference: {fileID: 0}
@@ -3330,11 +3354,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].timeRange.max
-      value: 10
+      value: 12
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].timeRange.min
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[3].timeRange.max
@@ -3494,7 +3518,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.easyEnemies.Array.data[0].spawnAmountLowBound
-      value: 3
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.easyEnemies.Array.data[1].spawnAmountLowBound
@@ -3546,7 +3570,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.easyEnemies.Array.data[0].spawnAmountHighBound
-      value: 5
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.easyEnemies.Array.data[1].spawnAmountHighBound
@@ -3562,7 +3586,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[2].enemyOptions.hardEnemies.Array.data[2].spawnAmountHighBound
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 7190358900932469544, guid: 21fb6688f9eec461c85b5dc02ddfb2a5, type: 3}
       propertyPath: phaseSettings.Array.data[3].enemyOptions.easyEnemies.Array.data[0].spawnAmountHighBound
@@ -3731,6 +3755,10 @@ PrefabInstance:
     - target: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
       propertyPath: m_Name
       value: DBulletEnemy1Spawn
+      objectReference: {fileID: 0}
+    - target: {fileID: 730736319650993459, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2163112175207494268, guid: 5250793f0c2b3de468170b90264a64a7, type: 3}
       propertyPath: startingHealth
