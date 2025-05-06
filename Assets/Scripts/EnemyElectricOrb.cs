@@ -10,10 +10,18 @@ public class EnemyElectricOrb : Projectile
     {
         State state = collider.GetComponent<State>();
 
-        if (state != null && state is not EarthState) 
+        if (state == null || state is EarthState)
         {
-            if (hitEffect != null)
+            Destroy(gameObject, 0.1f);
+        }
+        else
+        {
+            state.TakeDamage(GetDamage());
+
+            if (hitEffect != null && state is Stunnable)
             {
+                ((Stunnable)state).GetStunned(stunTime);
+
                 if (tempHitEffect == null)
                     Destroy(tempHitEffect);
 
@@ -24,13 +32,6 @@ public class EnemyElectricOrb : Projectile
                     sd.SetFollow(collider.transform);
 
                 Destroy(tempHitEffect, stunTime);
-            }
-
-            state.TakeDamage(GetDamage());
-
-            if (state is Stunnable)
-            {
-                ((Stunnable)state).GetStunned(stunTime);
             }
         }
     }

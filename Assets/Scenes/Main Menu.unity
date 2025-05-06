@@ -503,12 +503,24 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: "Game Controls:\n\nWASD - movement\n\nLeft Click (Hold) - Shoot bullet\n\nMove
-    Mouse - change rotation direction (player faces mouse)\n\nEnd button - returns
-    to hub\n\n\nHub Controls:\n\nClick and drag - Position ships\n\nHover over and
-    scroll - Rotate ships\n  \nAttack button - Go to battle!\n \n\nShoot enemies
+  m_text: "Game Controls:\n\nWASD - movement\n\nClick and hold mouse - shoot bullet\n\nSpace
+    - Hold to charge laser. Release after 2 seconds to shoot. Release after 4 seconds
+    to strong shoot.\n\n#1 Key - Press to shoot the Kamikaze minion\n\nMove Mouse
+    - change rotation direction (player faces mouse)\n\nEnd button - returns to hub\n\n\nHub
+    Controls:\n\nClick and drag - Position ships around the player\n\nHover over
+    and scroll - Rotate ships\n  \nAttack button - Go to battle!\n \n\nShoot enemies
     to kill and assimilate them into your army to increase your attack power. Destroy
-    Earth to beat the game! Good luck.\n"
+    Earth to beat the game! Good luck.\n\n\n\n\n\n\nCitations\n\n\u201CBasic Pixel
+    Health Bar and Scroll Bar by BDragon1727.\u201D Itch.io, bdragon1727.itch.io/basic-pixel-health-bar-and-scroll-bar.\n\r\nBrackeys.
+    \u201CHow to Make 2D GLOW in Unity!\u201D YouTube, 22 Mar. 2020, www.youtube.com/watch?v=WiDVoj5VQ4c.
+    Accessed 18 Dec. 2020.\n\r\n\u201CFoozle - Itch.io.\u201D Itch.io, 2025, foozlecc.itch.io/.\r\n\u201CFree
+    Pixel Art Space - Asset Pack by JIK-A-4.\u201D Itch.io, jik-a-4.itch.io/freepixel.\n\r\n\u201CParticle
+    Pack | VFX Particles | Unity Asset Store.\u201D Assetstore.unity.com, assetstore.unity.com/packages/vfx/particles/particle-pack-127325.\n\r\n\u201CPixel
+    Space Background Generator by Deep-Fold.\u201D Itch.io, deep-fold.itch.io/space-background-generator.\n\r\nTvtig.
+    \u201CHow to Create an Explosion Effect in Unity.\u201D YouTube, 4 Aug. 2021,
+    www.youtube.com/watch?v=cvQiQglPI18.\n\r\nYoutu.be, 2025, youtu.be/8oTYabhj248?si=T1sVzkrgILLimGaG.
+    Accessed 15 Apr. 2025.\n\r\nYoutu.be, 2025, youtu.be/_nRzoTzeyxU?si=t9dWFv5uZjXG_Ccb.
+    Accessed 15 Apr. 2025.\r\n\n\n\n"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}

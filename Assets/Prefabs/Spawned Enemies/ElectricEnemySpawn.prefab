@@ -168,6 +168,10 @@ PrefabInstance:
       value: Electric Enemy
       objectReference: {fileID: 0}
     - target: {fileID: 5623882224677015450, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
+      propertyPath: baseDamage
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 5623882224677015450, guid: d63122909b3ff8d4e8ad5783638b8d4e, type: 3}
       propertyPath: bulletSpeed
       value: 9
       objectReference: {fileID: 0}
