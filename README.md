@@ -1,6 +1,6 @@
 # Unity Project Setup (PLEASE READ)
 
-[![Demo Video](https://img.youtube.com/vi/e8B69nNBfKg/0.jpg] ((https://youtu.be/e8B69nNBfKg)
+[![Demo Video](https://img.youtube.com/vi/e8B69nNBfKg/0.jpg)] ((https://youtu.be/e8B69nNBfKg)
 
 Before you clone the team repo, follow these instructions:
 
