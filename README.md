@@ -5,15 +5,23 @@
 **Trailer video:** https://youtu.be/e8B69nNBfKg
 [![Watch the video](https://img.youtube.com/vi/e8B69nNBfKg/maxresdefault.jpg)](https://youtu.be/e8B69nNBfKg)
 
-Devour the Earth is a Space Invaders-inspired shooter built in Unity that focuses on persistent progression through failure. Players control disposable hivemind entities, assimilating enemy ships across runs to gradually overwhelm an escalating planetary defense system.
+*Devour the Earth* is a Space Invaders-inspired shooter built in Unity that focuses on persistent progression through failure. Players control disposable hivemind entities, assimilating enemy ships across runs to overwhelm an escalating planetary defense system gradually.
 
-## Gameplay Overview / Core Mechanics
+## Core Systems & Mechanics
+In *Devour the Earth*, each run (invasion) is a single, expendable hivemind attempting to break through Earth's defenses. Individual entities are inherently weak, so failure is expected. The primary objective during an invasion is to damage the Earth by firing at it while surviving waves of defending ships. Earth's health is represented by a global HP bar.
 
-When you press the Play button of the game, you'll enter the Hub, which is empty at the moment. Now, when you press the Attack button, located at the bottom right of the Hub, the invasion will begin. To devour the Earth, you must attack the Earth and lower its health, which is quantified at the bottom of the screen as the blue HP bar. You can move yourself with WASD, aim by moving the mouse, and fire a bullet with the left mouse click/hold.
+### Assimilation
+During each invasion, enemy ships, when destroyed, occasionally drop fragments, which can be collected and sent back to the hivemind base. These fragments are assimilated between invasions and converted into minions that persist across runs, as long as they are not destroyed.
 
-However, you are a mere single hivemind entity, too weak to destroy the Earth that is firmly protected by its space force. Fortunately, you can use your hivemind assimilation ability to collect the enemy ship fragments, send them to the hivemind base, and assimilate them into minions so that the next hivemind entity can use them. Every minion can be found in the Hub, where you can drag it to the radar-like space on the left part of the Hub to use it on the next invasion. Although you can assimilate as many ships as you want, they disappear from the Hub once destroyed.
+Before each invasion, players can 
 
-As you get stronger, you will notice that every time you lower the Earth's HP by 25%, it sends out stronger and more diverse ships. In these 4 different phases, the Earth will introduce a basic enemy, a kamikaze enemy, an electric enemy, and a laser enemy, respectively. Except for the basic minion (and other bullet-type minions), which you can fire their bullets with the left mouse click/hold, the other three types of minions require different inputs. For more details, press the CONTROLS button in the Hub.
+### Enemy Phases
+
+
+
+### Minion Control
+
+
 
 ## Technical Notes
 - Built in **Unity**
