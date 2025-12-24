@@ -65,6 +65,15 @@ Due to a WebGL limitation, the electric enemy's orb VFX does not render correctl
 - Built a state-based enemy AI system that idles around the Earth and chases or attacks players and minions accordingly
 - Learned that the hierarchical enemy/minion class structure (base entity => enemy/minion => specific types) significantly simplifies logic term logic
 
+## Contributors
+
+- nirow1010 - player movement design, entity class hierarchy, and enemy/minion ability design & implementation (including particles and VFX)
+- Aisuirocellist - main theme composition, sound effects, menu UI, and CONTROLS scene
+- James-275 - assimilation system, enemy AI & pathfinding, and minion auto-targeting
+- TheSpoon7784 - enemy/minion sprites, health bars, and enemy spawn design
+
+Each member contributed support across other areas as needed, as well as to the game documentation and core concept.
+
 ## Special Thanks to:
 
 - Foozle - Itch.io - Void ship collection
