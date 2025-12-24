@@ -19,7 +19,7 @@ Before starting a new invasion, players can drag assimilated minions into a rada
 
 ### Enemy Phases
 
-Earth's defenses escalate based on remaining HP. Every 25% reduction introduces a new enemy type:
+Earth's defenses escalate based on remaining HP. Every 25% reduction, including the start, introduces a new enemy type:
 
 #### Basic Enemies 
 Standard projectile-based units (with two variants).
@@ -45,7 +45,9 @@ Precision-based units that charge high-damage laser attacks.
 
 ### Minion Control
 
+Different minion types require different player inputs to activate their abilities. **Basic** and **Electric** minions fire using the player shooting input (left mouse click), **Kamikaze** enemies launch when the '1' key is pressed, and **Laser** enemies charge while holding the spacebar and fire upon release.
 
+The input
 
 ## Technical Notes
 - Built in **Unity**
