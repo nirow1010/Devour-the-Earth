@@ -19,7 +19,7 @@ When you press the Play button of the game, you'll enter the Hub, which is empty
 
 However, you are a mere single hivemind entity, too weak to destroy the Earth that is firmly protected by its space force. Fortunately, you can use your hivemind assimilation ability to collect the enemy ship fragments, send them to the hivemind base, and assimilate them so that the next hivemind entity can use them. Every assimilated ship can be found in the Hub, where you can drag it to the radar-like space on the left part of the Hub to use it on the next invasion. Although you can assimilate as many ships as you want, they disappear from the Hub once destroyed.
 
-
+As you get stronger, you will notice that every time you lower the Earth's HP by 25%, it sends out more diverse and stronger ships. Earth has, in total, 4 phases
 
 ## Core Mechanics
 
@@ -35,7 +35,7 @@ However, you are a mere single hivemind entity, too weak to destroy the Earth th
 
 ## Technical Limitations
 
-Unfortunately, the electric enemy, which uses 
+Unfortunately, the electric orb of the electric enemy, which uses SFX, is not visible in the WebGL build (itch.io website) due to an internal issue. Although our team included the WebGL version for convenience, we highly recommend downloading the Unity build (execution) file from the download section at the bottom of the itch.io website.
 
 ## Special Thanks to:
 - Foozle - Itch.io - Void ship collection
