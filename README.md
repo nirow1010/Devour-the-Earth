@@ -47,16 +47,20 @@ Precision-based units that charge high-damage laser attacks.
 
 Different minion types require different player inputs to activate their abilities. **Basic** and **Electric** minions fire using the player shooting input (left mouse click), **Kamikaze** enemies launch when the '1' key is pressed, and **Laser** enemies charge while holding the spacebar and fire upon release.
 
-The input
+This input differentiation gives each minion type a distinct tactical role and forces players to make active decisions during combat.
 
 ## Technical Notes
 - Built in **Unity**
 - Target platforms: **WebGL** and **Windows**
-- Due to a WebGL limitation, the electric enemy's orb SFX visual effect does not render correctly on itch.io. Hence, the Windows executable is recommended.
+- Due to a WebGL limitation, the electric enemy's orb VFX does not render correctly on itch.io. Hence, the Windows executable is recommended.
 
 ## Lessons Learned
 
-
+- Designed a fail-to-win progression system
+- Implemented acceleration-based, space-like movement to achieve smooth yet slippery movement
+- Balanced player, minion, and enemy strengths to maintain a consistent difficulty
+- Built a state-based enemy AI system that idles around the Earth and chases or attacks players and minions accordingly
+- Learned that the hierarchical enemy/minion class structure (base entity => enemy/minion => specific types) significantly simplifies logic term logic
 
 ## Special Thanks to:
 - Foozle - Itch.io - Void ship collection
