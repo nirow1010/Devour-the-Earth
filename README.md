@@ -21,7 +21,7 @@ Before starting a new invasion, players can drag assimilated minions into a rada
 
 Earth's defenses escalate based on remaining HP => every 25% reduction introduces a new enemy type:
 
-- #### Basic Enemies 
+**Basic Enemies** 
 Standard projectile-based units (with two variants).
 
 #### Kamikaze enemies
