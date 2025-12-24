@@ -9,7 +9,7 @@
 
 ## Core Systems & Mechanics
 
-In *Devour the Earth*, each run (invasion) is a single, expendable hive mind attempting to break through Earth's defenses. Individual entities are inherently weak, so failure is expected. The primary objective during an invasion is to damage the Earth by firing at it while surviving waves of defending ships. Earth's health is represented by a global HP bar.
+In *Devour the Earth*, each run (invasion) is a single, expendable hive mind entity attempting to break through Earth's defenses. Individual entities are inherently weak, so failure is expected. The primary objective during an invasion is to damage the Earth by firing at it while surviving waves of defending ships. Earth's health is represented by a global HP bar.
 
 ### Assimilation
 
@@ -50,6 +50,7 @@ Different minion types require different player inputs to activate their abiliti
 This input differentiation gives each minion type a distinct tactical role and forces players to make active decisions during combat.
 
 ## Technical Notes
+
 ![Unity 6](https://img.shields.io/badge/Engine-Unity%206-black)
 ![C#](https://img.shields.io/badge/Language-C%23-blue)
 ![Platform](https://img.shields.io/badge/Platform-WebGL%20%7C%20Windows-green)
@@ -58,13 +59,14 @@ Due to a WebGL limitation, the electric enemy's orb VFX does not render correctl
 
 ## Lessons Learned
 
-- Designed a fail-to-win progression system
+- Designed a fail-to-win progression system, centered around the assimilation mechanic
 - Implemented acceleration-based, space-like movement to achieve smooth yet slippery movement
 - Balanced player, minion, and enemy strengths to maintain a consistent difficulty
 - Built a state-based enemy AI system that idles around the Earth and chases or attacks players and minions accordingly
 - Learned that the hierarchical enemy/minion class structure (base entity => enemy/minion => specific types) significantly simplifies logic term logic
 
 ## Special Thanks to:
+
 - Foozle - Itch.io - Void ship collection
 - JIK-A-4. Itch.io - Space Pixel Art Asset Pack
 - Deep-Fold - Itch.io - Pixel Space Background Generator
