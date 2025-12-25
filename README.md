@@ -41,7 +41,7 @@ Precision-based units that charge high-damage laser attacks.
 
 ![Laser enemy attack](https://github.com/user-attachments/assets/c996e041-54a3-4d6a-b2d9-ce6d59c8b5ff)
 
-(The gif does not represent the true damage of the enemies, as the player's health is increased by 3 times for recording purposes)
+(The gif does not represent the true damage of the enemies, as the player's health is increased by 3 - 4 times for recording purposes)
 
 ### Minion Control
 
