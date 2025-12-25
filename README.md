@@ -80,4 +80,4 @@ Each member contributed support across other areas as needed, as well as to the 
 - JIK-A-4. Itch.io - Space Pixel Art Asset Pack
 - Deep-Fold - Itch.io - Pixel Space Background Generator
 - BDragon1727 - Itch.io - Basic Pixel Health bar and Scroll bar
-- [![Particle](https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325?srsltid=AfmBOorUvxGWc_Orc7YUt4505scjlHTOX9dPqB1CNnUJddw99QUadq82)]Particle Pack | VFX Particles | Unity Asset Store
+- [Particle Pack | VFX Particles](https://assetstore.unity.com/packages/vfx/particles/particle-pack-127325?srsltid=AfmBOorUvxGWc_Orc7YUt4505scjlHTOX9dPqB1CNnUJddw99QUadq82) | Unity Asset Store
