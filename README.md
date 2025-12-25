@@ -60,7 +60,7 @@ Due to a WebGL limitation, the electric enemy's orb VFX does not render correctl
 ## Lessons Learned
 
 - Designed a fail-to-win progression system, centered around the assimilation mechanic
-- Implemented acceleration-based movement to achieve smooth yet slippery controls, inspired by [@DawnosaurDev](https://github.com/DawnosaurDev)'s player movement concepts, independently implemented and adapted vector-based, top-down space movement.
+- Implemented acceleration-based movement to achieve smooth yet slippery controls, inspired by DawnosaurDev's player movement concepts, independently implemented and adapted vector-based, top-down space movement.
 - Balanced player, minion, and enemy strengths to maintain a consistent difficulty
 - Built a state-based enemy AI system that idles around the Earth and chases or attacks players and minions accordingly
 - Learned that the hierarchical enemy/minion class structure (base entity => enemy/minion => specific types) significantly simplifies logic flow
